@@ -76,13 +76,13 @@
             <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#logout-confirm-modal" style="margin: 10% 25% 25% 25%">
                 ログアウト
             </button>
-            <!-- モーダル・ダイアログ -->
+            
             <div class="modal fade" id="logout-confirm-modal" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                            <p class="modal-title">確認</h4>
+                            <p class="modal-title">確認</p>
                         </div>
                         <div class="modal-body">
                             本当にログアウトしますか？
