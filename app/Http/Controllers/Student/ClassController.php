@@ -151,6 +151,9 @@ class ClassController extends Controller
         $user_id = Auth::id();
         $class_id = 'class_' . $id;
         $user_schedule = Schedule::where('user_id', $user_id)->first();
+        $class = Lecture::find($user_schedule->$class_id);
+        --$class->count;
+        $class->save();
         $user_schedule->$class_id = NULL;
         $user_schedule->save();
         return redirect()->route('schedules.index')
