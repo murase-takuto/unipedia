@@ -31,11 +31,9 @@
                                         {{ method_field('PUT') }}
 
                                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                            <label for="name" class="col-md-4 control-label">授業名</label>
-
-                                            <div class="col-md-6">
+                                            <label for="name" class="col-sm-2 control-label">授業名</label>
+                                            <div class="col-sm-10">
                                                 <input id="name" type="text" class="form-control" name="name" required autofocus>
-
                                                 @if ($errors->has('name'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('name') }}</strong>
@@ -45,11 +43,9 @@
                                         </div>
 
                                         <div class="form-group{{ $errors->has('room_number') ? ' has-error' : '' }}">
-                                            <label for="room_number" class="col-md-4 control-label">教室</label>
-
-                                            <div class="col-md-6">
+                                            <label for="room_number" class="col-sm-2 control-label">教室</label>
+                                            <div class="col-sm-10">
                                                 <input id="room" type="text" class="form-control" name="room_number" required>
-
                                                 @if ($errors->has('room_number'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('room_number') }}</strong>
@@ -59,11 +55,9 @@
                                         </div>
 
                                         <div class="form-group{{ $errors->has('teacher') ? ' has-error' : '' }}">
-                                            <label for="teacher" class="col-md-4 control-label">担当教員</label>
-
-                                            <div class="col-md-6">
+                                            <label for="teacher" class="col-sm-2 control-label">担当教員</label>
+                                            <div class="col-sm-10">
                                                 <input id="teacher" type="text" class="form-control" name="teacher" required>
-
                                                 @if ($errors->has('teacher'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('teacher') }}</strong>
