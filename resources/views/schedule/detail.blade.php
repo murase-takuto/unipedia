@@ -35,22 +35,21 @@
                     </div>
                 </div>
             </div>
-            
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     @if ($exist_check->isNotEmpty())
-                    <div style="float: right;">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  style="border-color:transparent; padding:0">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" style="position: relative">
-                            <li role="presentation"><a class="btn btn-info" data-toggle="modal" data-target="#class-delete-confirm-modal" style="border-color:transparent">
-                                授業をコマから外す
-                            </a></li>
-                        </ul>
-                    </div>
-                    </div>
+                        <div class="pull-right">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  style="border-color:transparent; padding:0">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" style="position: relative">
+                                    <li role="presentation"><a class="btn btn-info" data-toggle="modal" data-target="#class-delete-confirm-modal" style="border-color:transparent">
+                                        授業をコマから外す
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
                     @endif
                     <p style="text-align:center;">
                         <label>
@@ -74,32 +73,24 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    <div class="input-group">
-                        <input type="hidden" name="class_id" value="{{ $id }}">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <img id="preview" style="width:110px;height:110px;">
-                            </div> 
-                            <div class="col-sm-10">
-                                <input type="text" name="body" class="form-control" style="height:110px;" placeholder="{{ $errors->has('body') ? $errors->first('body') : 'ここにテキストを入力' }}">
-                            </div>
-                        </div>
-                        <div class="input-group-btn row">
-                            <span class="btn btn-info" class="col-sm-12" style="height:55px;padding-top:5px;">
+                    <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <div class="input-group">
+                            <input type="hidden" name="class_id" value="{{ $id }}">
+                            <input type="text" name="body" class="form-control" placeholder="ここにテキストを入力">
+                            <span class="input-group-btn">
+                                <img id="preview" style="width:35px;height:35px;">
                                 <label>
-                                    <p style="padding-top:8px">画像を選択する</p>
-                                    <input type="file" name="image" class="form-control" style="display:none" id="putImage">
+                                    <span class="btn btn-info">
+                                        <i class="fas fa-camera"></i>
+                                        <input type="file" name="image" class="form-control" style="display:none" id="putImage">
+                                    </span>
                                 </label>
-                            </span>
-                            <span>    
-                                <input type="submit" class="btn btn-info col-sm-12" value="投稿する" style="height:55px;">
+                                <input type="submit" class="btn btn-info" value="投稿する">
                             </span>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
                 <ul class="list-group">
                     @if ($posts->isNotEmpty())
                         @foreach ($posts as $post)
@@ -125,16 +116,6 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <font size="1" color="#7e8183">
-        <ul class="nav nav-pills" style="text-align: center">
-            <li role="presentation" style="width: 24%"><a href="#">マイページ</a></li>
-            <li role="presentation" style="width: 25%" class="active"><a href="{{ route('schedules.index') }}">時間割</a></li>
-            <li role="presentation" style="width: 25%"><a href="#">大学掲示板</a></li>
-            <li role="presentation" style="width: 24%"><a href="#">お知らせ</a></li>
-        </ul>
-    </font>
-</nav>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $(function () {

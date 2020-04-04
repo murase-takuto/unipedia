@@ -12,18 +12,19 @@
                 <div class="alert alert-success">{{session('error')}}</div>
             @endif
             <input id="lefile" type="file" style="display:none">
-            <!--  ここをcssで投稿がなくても掲示板の形を取るようにする -->
+            
             <div class="panel panel-primary">
                 <div class="panel-heading" style="text-align:center;">
                     <label> {{ config('thread.' . $id . '.name') }}のスレッド一覧</label>
                 </div>
+                <p class="text-center">新しいスレッドはこちらのフォームで作成できます</p>
                 <form method="post" action="{{ route('threads.store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="input-group">
                         <input type="hidden" name="type_id" value="{{ $id }}">
                         <input type="text" name="title" class="form-control" placeholder="スレッドのタイトルを入力">
                         <span class="input-group-btn">
-                            <input type="submit" class="btn btn-info" value="新規スレッドをオープンする">
+                            <button type="submit" class="btn btn-info">新規スレッドを開く</button>
                         </span>
                     </div>
                 </form>
