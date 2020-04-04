@@ -88,10 +88,7 @@ class ClassController extends Controller
             ->where('class_id', $id)
             ->orderBy('created_at', 'dsc')
             ->paginate(10);
-        $exist_check = Schedule::where('user_id', $user_id)
-            ->where($class_id, $lecture->id)
-            ->get();
-        return view('schedule.detail', compact('id', 'exist_check', 'lecture', 'posts'));
+        return view('schedule.detail', compact('id', 'lecture', 'posts'));
     }
 
     /**

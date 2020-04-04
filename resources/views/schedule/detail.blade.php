@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.class')
 
 @section('content')
 <div class="container" style="margin-top: 10px;">
@@ -37,30 +37,11 @@
             </div>
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    @if ($exist_check->isNotEmpty())
-                        <div class="pull-right">
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"  style="border-color:transparent; padding:0">
-                                    <i class="fas fa-bars"></i>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" style="position: relative">
-                                    <li role="presentation"><a class="btn btn-info" data-toggle="modal" data-target="#class-delete-confirm-modal" style="border-color:transparent">
-                                        授業をコマから外す
-                                    </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    @endif
-                    <p style="text-align:center;">
-                        <label>
-                            {{ config('time.' . $id) }}・{{ $lecture->name }}の掲示板
-                        </label>
-                    </p>
                     <table class="table">
                         <tbody>
                             <tr>
                                 <td colspan="2">
-                                    <label>授業名</label><p>{{ $lecture->name }}</p>
+                                    <div class="text-center"><label>授業名</label><p style="font-size: 20px">{{ $lecture->name }}</p></div>
                                 </td>
                             </tr>
                             <tr>
@@ -103,7 +84,7 @@
                                     <img src="{{asset('storage/post_board_img/' . $post->image_path)}}">
                                 @endif
                                 <p style="overflow-wrap: break-word">
-                                {{ $post->body }}
+                                    {{ $post->body }}
                                 </p>
                             </li>
                         @endforeach
