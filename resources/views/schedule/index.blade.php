@@ -27,12 +27,24 @@
                     @if ($i % 6 == 1)
                         <tr><td bgcolor="#E4E5E9" width="4%">{{ $j++ }}</td>
                     @endif
+                    @php
+                        $color_id = 'color_' . $i;
+                    @endphp
                     <td width="16%">
                         @if ($lecture_infos[$i] == null)
                             <a href="{{ route('schedules.create', ['id' => $i]) }}">{{ '-' }}</a>
                         @else
-                            <font size="1" color="#7e8183">
-                                <a href="{{ route('class.show', ['id' => $i]) }}">{{ $lecture_infos[$i]['name'] }}<br>{{ $lecture_infos[$i]['room_number'] }}</a>
+                            <font size="1">
+                                <p>{{ $lecture_infos[$i]['name'] }}</p>
+                                <a href="{{ route('class.show', ['id' => $i]) }}" style="color:black; background-color:{{ config('colors.' . $infos->$color_id) }}">
+                                    <span style="position:relative">
+                                        <span style="font-weight: bold">
+                                            {{ $lecture_infos[$i]['name'] }}
+                                        </span>
+                                        <br>
+                                        {{ $lecture_infos[$i]['room_number'] }}
+                                    </span>
+                                </a>
                             </font>
                         @endif
                     </td>

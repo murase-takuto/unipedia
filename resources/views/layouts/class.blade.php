@@ -36,19 +36,104 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a class="btn btn-info" data-toggle="modal" data-target="#class-delete-confirm-modal" style="border-color:transparent">
                                 授業をコマから外す
                             </a>
                         </li>
+                        <li class="dropdown">
+                            <a class="btn btn-info" data-toggle="modal" data-target="#class-color-change-modal" style="border-color:transparent">
+                                授業のコマの色を変更する
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!--コマ削除確認モーダル-->
+        <div class="modal fade" id="class-delete-confirm-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <p class="modal-title">確認</p>
+                    </div>
+                    <div class="modal-body">
+                        本当に授業をコマから外しますか？
+                    </div>
+                    <form id="class-delete-form" action="{{ route('class.destroy', [$id]) }}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn-danger btn-block" type="submit" value="delete">
+                            外す
+                        </button>
+                    </form>
+                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal">キャンセル</button>
+                </div>
+            </div>
+        </div>
+        <!--色変更モーダル-->
+        <div class="modal fade" id="class-color-change-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <p class="modal-title">時間割表のコマの色を変更できます。</p>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">以下の中から好きな色を選んでください。</p>
+                        <form class="form-horizontal" id="class-color-change" action="{{ route('schedules.update', [$id]) }}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('PUT') }}
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="0" checked><span style="color:{{ config('colors.0') }};text-stroke:1px #000">ホワイト</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="1"><span style="color:{{ config('colors.1') }};">ピンク（必修科目）</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="2"><span style="color:{{ config('colors.2') }};">イエロー（選択科目）</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="3"><span style="color:{{ config('colors.3') }};">オレンジ</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="4"><span style="color:{{ config('colors.4') }};">グリーン</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="5"><span style="color:{{ config('colors.5') }};">ブルー</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="color" value="6"><span style="color:{{ config('colors.6') }};">パープル</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-block" type="submit" value="update-color">
+                                変更する
+                            </button>
+                            <button type="button" class="btn btn-default btn-block" data-dismiss="modal">キャンセル</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         @yield('content')
     </div>

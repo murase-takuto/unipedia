@@ -11,45 +11,28 @@
                 <div class="alert alert-danger">{{session('error')}}</div>
             @endif
             <input id="lefile" type="file" style="display:none">
-            
-            <div class="modal fade" id="class-delete-confirm-modal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                            <p class="modal-title">確認</p>
-                        </div>
-                        <div class="modal-body">
-                            本当に授業をコマから外しますか？
-                        </div>
-                        <div class="modal-footer">
-                            <form id="class-delete-form" action="{{ route('class.destroy', [$id]) }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <button class="btn btn-danger btn-block" type="submit" value="delete">
-                                    外す
-                                </button>
-                            </form>
-                            <button type="button" class="btn btn-default btn-block" data-dismiss="modal">キャンセル</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <table class="table">
                         <tbody>
                             <tr>
                                 <td colspan="2">
-                                    <div class="text-center"><label>授業名</label><p style="font-size: 20px">{{ $lecture->name }}</p></div>
+                                    <div class="text-center">
+                                        <label>授業名</label><p style="font-size: 20px">{{ $lecture->name }}</p>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label>教室</label><p>{{ $lecture->room_number }}</p>
+                                    <div class="text-center">
+                                        <label>教室</label><p>{{ $lecture->room_number }}</p>
+                                    </div>
                                 </td>
                                 <td>
-                                    <label>担当教員</label><p>{{ $lecture->teacher }}</p>
+                                    <div class="text-center">
+                                        <label>担当教員</label><p>{{ $lecture->teacher }}</p>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
