@@ -45,10 +45,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td width=50%>
                                     <label>教室</label><p>{{ $lecture->room_number }}</p>
                                 </td>
-                                <td>
+                                <td width=50%>
                                     <label>担当教員</label><p>{{ $lecture->teacher }}</p>
                                 </td>
                             </tr>
