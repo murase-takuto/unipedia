@@ -24,6 +24,7 @@
                                 </td>
                             </tr>
                             <tr>
+<<<<<<< HEAD
                                 <td>
                                     <div class="text-center">
                                         <label>教室</label><p>{{ $lecture->room_number }}</p>
@@ -33,6 +34,13 @@
                                     <div class="text-center">
                                         <label>担当教員</label><p>{{ $lecture->teacher }}</p>
                                     </div>
+=======
+                                <td width=50%>
+                                    <label>教室</label><p>{{ $lecture->room_number }}</p>
+                                </td>
+                                <td width=50%>
+                                    <label>担当教員</label><p>{{ $lecture->teacher }}</p>
+>>>>>>> master
                                 </td>
                             </tr>
                         </tbody>
