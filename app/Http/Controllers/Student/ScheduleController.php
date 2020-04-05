@@ -23,13 +23,14 @@ class ScheduleController extends Controller
         $lecture_infos[] = null;
         for ($i = 1; $i <= 36; $i++) {
             $class_id = 'class_' . $i;
+            $color_id = 'color_' . $i;
             if ($infos->$class_id != null) {
                 $lecture_infos[] = Lecture::where('id', $infos->$class_id)->first();
             } else {
                 $lecture_infos[] = null;
             }
         }
-        return view('schedule.index', compact('lecture_infos'));
+        return view('schedule.index', compact('infos', 'lecture_infos'));
     }
 
     /**
@@ -93,7 +94,12 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $color_id = 'color_' . $id;
+        $user_id = Auth::id();
+        $schedule = Schedule::find($user_id);
+        $schedule->$color_id = $request->color;
+        $schedule->save();
+        return redirect()->route('schedules.index')->with('status', '色を変更しました');   
     }
 
     /**
