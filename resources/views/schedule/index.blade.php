@@ -34,7 +34,6 @@
                         @if ($lecture_infos[$i] == null)
                             <a href="{{ route('schedules.create', ['id' => $i]) }}" style="color:black">{{ '-' }}</a>
                         @else
-<<<<<<< HEAD
                             <font size="1">
                                 <p>{{ $lecture_infos[$i]['name'] }}</p>
                                 <a href="{{ route('class.show', ['id' => $i]) }}" style="color:black; background-color:{{ config('colors.' . $infos->$color_id) }}">
@@ -46,10 +45,6 @@
                                         {{ $lecture_infos[$i]['room_number'] }}
                                     </span>
                                 </a>
-=======
-                            <font size="1" color="#7e8183">
-                                <a href="{{ route('class.show', ['id' => $i]) }}" style="color:black">{{ $lecture_infos[$i]['name'] }}<br>{{ $lecture_infos[$i]['room_number'] }}</a>
->>>>>>> master
                             </font>
                         @endif
                     </td>
