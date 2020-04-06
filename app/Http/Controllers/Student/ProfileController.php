@@ -89,7 +89,7 @@ class ProfileController extends Controller
                     ]);
                     $profile->save();
                 });
-                return redirect()->back()
+                return redirect()->route('profile.index')
                     ->with(
                         'status', 
                         'プロフィールを変更しました。メールアドレスを変更した場合は変更後のメールアドレスを確認して認証してください'
@@ -100,7 +100,7 @@ class ProfileController extends Controller
             return redirect()->back()
                 ->with('error', 'パスワードが一致しません');
         }
-        return redirect()->view('profile.index')
+        return redirect()->route('profile.index')
             ->with('status', 'プロフィールを変更しました。');
     }
 
