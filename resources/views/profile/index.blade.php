@@ -1,79 +1,54 @@
-@extends('layouts.app')
+@extends('layouts.profile')
 <link href="css/style.css" rel="stylesheet" type="text/css">
 @section('content')
 <div class="container" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary" style="margin-bottom:10px">
-                <div class="panel-heading" style="text-align: center">プロフィール編集</div>
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    @if (session('error'))
-                        <div class="alert alert-danger">{{session('error')}}</div>
-                    @endif
-
-                    @if (count($errors) > 0)
-                        <ul class="alert alert-danger" style="list-style: none;">
-                            @foreach ($errors->all() as $error)
-                                <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    @endif
-                    <form action="{{route('profile.store')}}" method="post">
-                        {{ csrf_field() }}
-                        <div class="list-group">
-                            <span class="list-group-item" data-toggle="collapse" href="#name">
-                                <span class="glyphicon glyphicon-plus" style="font-size: 25px" aria-hidden="true"></span> 
-                                氏名
-                            </span>
-                            <div class="collapse" id="name">
-                                <div class="well">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="name" value="{{ $user->name }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="list-group-item" data-toggle="collapse" href="#email">
-                                <span class="glyphicon glyphicon-plus" style="font-size: 25px" aria-hidden="true"></span> 
-                                メールアドレス
-                            </span>
-                            <div class="collapse" id="email">
-                                <div class="well">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="email" value="{{ $user->email }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="list-group-item" data-toggle="collapse" href="#newpass">
-                                <span class="glyphicon glyphicon-plus" style="font-size: 25px" aria-hidden="true"></span> 
-                                新しいパスワード
-                            </span>
-                            <div class="collapse" id="newpass">
-                                <div class="well">
-                                    <div class="form-group">
-                                        新しいパスワード
-                                        <input class="form-control" type="password" name="newpass">
-                                        新しいパスワード（確認用）
-                                        <input class="form-control" type="password" name="newpass_confirmation">
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="list-group-item">
-                                現在のパスワード
-                                <div class="form-group">
-                                    <input class="form-control" type="password" name="oldpass">
-                                </div>
-                            </span>
-                            <input type="submit" value="プロフィールを変更する" class="btn btn-info btn-block" style="margin: 5% 20%">
-                        </div>
-                    </form>
-                </div>
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
             </div>
-            <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#logout-confirm-modal" style="margin: 10% 25% 25% 25%">
+            @endif
+            
+            @if (session('error'))
+            <div class="alert alert-danger">{{session('error')}}</div>
+            @endif
+            
+            @if (count($errors) > 0)
+            <ul class="alert alert-danger" style="list-style: none;">
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+                @endforeach
+            </ul>
+            @endif
+            <div class="panel panel-primary" style="margin-bottom:10px">
+                <div class="panel-heading" style="text-align: center">
+                    <strong>マイページ</strong>
+                </div>
+                <span class="text-center">
+                    <div class="panel-body" style="text-align: center">
+                        @if ($user->avatar)
+                            <img src="storage/profile_img/{{ $user->avatar }}" class="img-circle" style="width:220px; height:220px; border-radius:50%; background-position: center center; margin:20px auto;">
+                        @else
+                            <img src="storage/profile_img/default.png" class="img-circle" style="width:220px; height:220px; margin:20px auto;">
+                        @endif
+                        <br>
+                        <label>名前</label>
+                        <p>{{ $user->name }}</p>
+                        <br>
+                        <label>大学</label>
+                        <p>{{ config($user->pref_id . '.' . $user->university_id .'.name') }}</p>
+                        <br>
+                        <label>学部</label>
+                        <p>{{ config($user->pref_id . '.' . $user->university_id .'.fuculty.' . $user->fuculty_id) }}</p>
+                        <br>
+                        <label>学科</label>
+                        <p>{{ config($user->pref_id . '.' . $user->university_id .'.class.' . $user->fuculty_id . '.' . $user->fuculty_id) }}</p>
+                        <br>
+                    </div>
+                </span>
+            </div>
+            <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#logout-confirm-modal" style="width:10%; margin:auto auto 25% auto">
                 ログアウト
             </button>
             
