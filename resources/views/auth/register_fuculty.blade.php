@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     <div class="form-group{{ $errors->has('school') ? ' has-error' : '' }}">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-md-offset-3">
                             @if (session('error'))
                             <p class="alert alert-danger">{{ session('error') }}</p>
                             @endif
