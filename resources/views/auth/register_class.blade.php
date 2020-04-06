@@ -23,7 +23,7 @@
                             @endforeach
                             </div>
                         @endif 
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-md-offset-3">
                             @if (session('error'))
                             <p class="alert alert-danger">{{ session('error') }}</p>
                             @endif
