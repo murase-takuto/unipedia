@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('message'))
-                <div class="alert alert-success">{{session('message')}}</div>
+            <div class="alert alert-success">{{session('message')}}</div>
             @endif
             @if (session('error'))
-                <div class="alert alert-danger">{{session('error')}}</div>
+            <div class="alert alert-danger">{{session('error')}}</div>
             @endif
             <input id="lefile" type="file" style="display:none">
 
@@ -19,19 +19,22 @@
                             <tr>
                                 <td colspan="2">
                                     <div class="text-center">
-                                        <label>授業名</label><p style="font-size: 20px">{{ $lecture->name }}</p>
+                                        <label>授業名</label>
+                                        <p style="font-size: 20px">{{ $lecture->name }}</p>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <div class="text-center">
-                                        <label>教室</label><p>{{ $lecture->room_number }}</p>
+                                        <label>教室</label>
+                                        <p>{{ $lecture->room_number }}</p>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="text-center">
-                                        <label>担当教員</label><p>{{ $lecture->teacher }}</p>
+                                        <label>担当教員</label>
+                                        <p>{{ $lecture->teacher }}</p>
                                     </div>
                                 </td>
                             </tr>
@@ -55,25 +58,25 @@
                         </div>
                     </form>
                 </div>
-                <ul class="list-group">
+                <ul class="list-group posts">
                     @if ($posts->isNotEmpty())
                         @foreach ($posts as $post)
-                            <li class="list-group-item">
-                                <font size="2" color="#7e8183">
-                                    {{ $post->created_at }}  投稿者 {{ $post->user->name }}
-                                </font>
-                                <br>
-                                @if ($post->image_path)
-                                    <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
-                                @endif
-                                <p style="overflow-wrap: break-word">
-                                    {{ $post->body }}
-                                </p>
-                            </li>
+                        <li class="list-group-item">
+                            <font size="2" color="#7e8183">
+                                {{ $post->created_at }} 投稿者 {{ $post->user->name }}
+                            </font>
+                            <br>
+                            @if ($post->image_path)
+                            <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
+                            @endif
+                            <p style="overflow-wrap: break-word">
+                                {{ $post->body }}
+                            </p>
+                        </li>
                         @endforeach
                         {{ $posts->links() }}
                     @else
-                        <li class="list-group-item">この授業についての投稿はまだありません。</li>
+                    <li class="list-group-item">この授業についての投稿はまだありません。</li>
                     @endif
                 </ul>
             </div>
@@ -82,19 +85,25 @@
 </div>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-$(function () {
-    $('#putImage').on('change', function (e) {
-        var file = e.target.files[0];
-        var reader = new FileReader();
-        if(file.type.indexOf("image") < 0){
-            alert("画像ファイルを指定してください。");
-            return false;
-        }
-        reader.onload = function (e) {
-            $("#preview").attr('src', e.target.result);
-        }
-        reader.readAsDataURL(file);
+    $(function() {
+        $('#putImage').on('change', function(e) {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            if (file.type.indexOf("image") < 0) {
+                alert("画像ファイルを指定してください。");
+                return false;
+            }
+            reader.onload = function(e) {
+                $("#preview").attr('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+        })
     })
-})
+
+    $(function() {
+        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+
+        $('.posts').html($('.posts').html().replace(exp, "<a href='$1'>$1</a>"));
+    })
 </script>
 @endsection

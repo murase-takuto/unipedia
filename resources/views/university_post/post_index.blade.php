@@ -36,7 +36,7 @@
                         </div>
                     </form>
                 </div>
-                <ul class="list-group">
+                <ul class="list-group posts">
                     @foreach ($posts as $post)
                         <li class="list-group-item">
                             <font size="2" color="#7e8183">
@@ -71,6 +71,12 @@ $(function () {
             $("#preview").attr('src', e.target.result);
         }
         reader.readAsDataURL(file);
+    })
+    
+    $(function() {
+        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+
+        $('.posts').html($('.posts').html().replace(exp, "<a href='$1'>$1</a>"));
     })
 })
 </script>
