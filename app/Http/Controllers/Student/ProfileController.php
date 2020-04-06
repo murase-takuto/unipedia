@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailChange;
 use App\EmailChange;
 use App\User;
+use Image;
 
 
 class ProfileController extends Controller
@@ -31,7 +32,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        $user = $this->user->find(Auth::id());
+        $user = Auth::user();
         return view('profile.index', compact('user'));
     }
 
@@ -42,7 +43,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $user = $this->user->find(Auth::id());
+        return view('profile.edit', compact('user'));
     }
 
     /**
@@ -55,6 +57,17 @@ class ProfileController extends Controller
     {
         $profile = $this->user->find(Auth::id());
         $profile->name = $request->name;
+
+        //投稿内容required validation
+        if ($request->image) {
+            $img = Image::make($request->image);
+            $user = Auth::user();
+            $img_path = 'unipedia_' . uniqid() . '.jpg';
+            $img->save(public_path() . '/storage/profile_img/' .  $img_path);
+            $user->avatar = $img_path;
+            $user->save();
+            $result = true;
+        }
 
         if (Hash::check($request->oldpass, $profile->password)) {
             $profile->password = Hash::make($request->oldpass);
@@ -76,7 +89,7 @@ class ProfileController extends Controller
                     ]);
                     $profile->save();
                 });
-                return redirect()->back()
+                return redirect()->route('profile.index')
                     ->with(
                         'status', 
                         'プロフィールを変更しました。メールアドレスを変更した場合は変更後のメールアドレスを確認して認証してください'
@@ -87,7 +100,7 @@ class ProfileController extends Controller
             return redirect()->back()
                 ->with('error', 'パスワードが一致しません');
         }
-        return redirect()->back()
+        return redirect()->route('profile.index')
             ->with('status', 'プロフィールを変更しました。');
     }
 
