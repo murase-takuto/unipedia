@@ -44,7 +44,7 @@
                             </font>
                             <br>
                             @if ($post->image_path)
-                                <img src="{{asset('storage/post_board_img/' . $post->image_path)}}">
+                                <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
                             @else 
                                 <p style="overflow-wrap: break-word">
                                     {{ $post->body }}

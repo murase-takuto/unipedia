@@ -45,7 +45,7 @@ class UniversityPostController extends Controller
         if ($request->file('image')) {
             $img = Image::make($request->image);
             $img_path = 'unipedia_' . uniqid() . '.jpg';
-            $img->resize(300, 300)->save(storage_path() . '/app/public/post_board_img/' .  $img_path);
+            $img->save(storage_path() . '/app/public/post_board_img/' .  $img_path);
             $university_post->image_path = $img_path;
             $result = true;
         } else {

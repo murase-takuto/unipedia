@@ -53,7 +53,7 @@ class ClassController extends Controller
         if ($request->image) {
             $img = Image::make($request->image);
             $img_path = 'unipedia_' . uniqid() . '.jpg';
-            $img->resize(300, 300)->save(storage_path() . '/app/public/post_board_img/' .  $img_path);
+            $img->save(storage_path() . '/app/public/post_board_img/' .  $img_path);
             $post->image_path = $img_path;
             $result = true;
         }
