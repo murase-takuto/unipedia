@@ -66,12 +66,18 @@
                                 {{ $post->created_at }} 投稿者 {{ $post->user->name }}
                             </font>
                             <br>
+                            @php
+                                $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
+                                $replace = '<a href="$1">$1</a>';
+                                $body = preg_replace($pattern, $replace, $post->body);
+                            @endphp
                             @if ($post->image_path)
-                            <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
+                                <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
+                            @else 
+                                <p style="overflow-wrap: break-word">
+                                    {!! $body !!}
+                                </p>
                             @endif
-                            <p style="overflow-wrap: break-word">
-                                {{ $post->body }}
-                            </p>
                         </li>
                         @endforeach
                         {{ $posts->links() }}
@@ -98,12 +104,6 @@
             }
             reader.readAsDataURL(file);
         })
-    })
-
-    $(function() {
-        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-
-        $('.posts').html($('.posts').html().replace(exp, "<a href='$1'>$1</a>"));
     })
 </script>
 @endsection
