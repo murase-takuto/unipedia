@@ -81,12 +81,13 @@
                                 </div>
                             </div>
                             <span class="list-group-item">
-                                現在のパスワード
+                                現在のパスワード<span style="color: red">※必須</span>
                                 <div class="form-group">
-                                    <input class="form-control" type="password" name="oldpass">
+                                    <input class="form-control" type="password" name="oldpass" required>
                                 </div>
                             </span>
-                            <input type="submit" value="プロフィールを変更する" class="btn btn-info btn-block" style="margin: 5% 20%">
+                            <p class="text-center" style="margin-top: 10px">※変更を完了するには現在のパスワードが必要です。</p>
+                            <input type="submit" value="プロフィールを変更する" class="btn btn-info btn-block" style="margin: 5px 20%">
                         </div>
                     </form>
                 </div>

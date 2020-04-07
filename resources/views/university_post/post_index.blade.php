@@ -57,7 +57,9 @@
                             @endif
                         </li>
                     @endforeach
-                    {{ $posts->links() }}
+                    <div class="text-center">
+                        {{ $posts->links() }}
+                    </div>
                 </ul>
             </div>
         </div>
