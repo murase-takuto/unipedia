@@ -4,13 +4,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            @if (session('message'))
-                <div class="alert alert-success">{{session('message')}}</div>
-            @endif
-
-            @if (session('error'))
-                <div class="alert alert-success">{{session('error')}}</div>
-            @endif
             <input id="lefile" type="file" style="display:none">
             
             <div class="panel panel-primary">
@@ -18,6 +11,23 @@
                     <label> {{ config('thread.' . $id . '.name') }}のスレッド一覧</label>
                 </div>
                 <p class="text-center">新しいスレッドはこちらのフォームで作成できます</p>
+
+                @if (session('message'))
+                    <div class="alert alert-success">{{ session('message') }}</div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger">{{ session('error') }}</div>
+                @endif
+
+                @if(count($errors) > 0)
+                    <ul class="alert alert-danger"　style="list-style: none;">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                    </ul>
+                @endif
+
                 <form method="post" action="{{ route('threads.store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="input-group">

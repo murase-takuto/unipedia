@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Student;
 
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\MakeThreadRequest;
 use App\Thread;
 use App\UniversityPost;
 
@@ -43,10 +45,13 @@ class ThreadController extends Controller
      * @return \Illuminate\Http\Response
      */
     //スレッドの新規作成
-    public function store(Request $request)
+    public function store(MakeThreadRequest $request)
     {
+        if (!Config::has('thread.' . $request->type_id)) {
+            return redirect()->back()
+                ->with('error', '存在しない種類のスレッドは作成できません');
+        }
         $user = Auth::user();
-        $pref_id = $user->pref_id;
         $university_id = $user->university_id;
         DB::transaction(function () use ($user, $university_id, $request) {
             $thread = Thread::create([
@@ -62,7 +67,8 @@ class ThreadController extends Controller
                 'body' => 'スレッドが作成されました。',
             ]);
         });
-        return back();
+        return back()
+            ->with('message', 'スレッドを作成しました!');
     }
 
     /**
@@ -76,7 +82,8 @@ class ThreadController extends Controller
     {
         $user = Auth::user();
         $university_id = $user->university_id;
-        $threads = Thread::where([['university_id', $university_id], ['type_id', $id]])
+        $threads = Thread::where('university_id', $university_id) 
+            ->where('type_id', $id)
             ->orderBy('updated_at', 'dsc')
             ->get();
         return view('university_post.thread_index', compact('university_id', 'id', 'threads'));
