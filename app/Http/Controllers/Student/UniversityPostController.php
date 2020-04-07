@@ -73,7 +73,7 @@ class UniversityPostController extends Controller
         $thread->save();
         $posts = UniversityPost::where('thread_id', $id)
             ->orderBy('created_at', 'dsc')
-            ->get();
+            ->paginate(10);
         return view('university_post.post_index', compact('thread', 'posts'));
     }
 
