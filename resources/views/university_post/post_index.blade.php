@@ -43,11 +43,16 @@
                                 {{ $post->created_at }}
                             </font>
                             <br>
+                            @php
+                                $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
+                                $replace = '<a href="$1">$1</a>';
+                                $body = preg_replace($pattern, $replace, $post->body);
+                            @endphp
                             @if ($post->image_path)
                                 <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
                             @else 
                                 <p style="overflow-wrap: break-word">
-                                    {{ $post->body }}
+                                    {!! $body !!}
                                 </p>
                             @endif
                         </li>
@@ -59,25 +64,19 @@
 </div>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-$(function () {
-    $('#putImage').on('change', function (e) {
-        var file = e.target.files[0];
-        var reader = new FileReader();
-        if(file.type.indexOf("image") < 0){
-            alert("画像ファイルを指定してください。");
-            return false;
-        }
-        reader.onload = function (e) {
-            $("#preview").attr('src', e.target.result);
-        }
-        reader.readAsDataURL(file);
+    $(function () {
+        $('#putImage').on('change', function (e) {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            if(file.type.indexOf("image") < 0){
+                alert("画像ファイルを指定してください。");
+                return false;
+            }
+            reader.onload = function (e) {
+                $("#preview").attr('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+        })
     })
-    
-    $(function() {
-        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-
-        $('.posts').html($('.posts').html().replace(exp, "<a href='$1'>$1</a>"));
-    })
-})
 </script>
 @endsection
