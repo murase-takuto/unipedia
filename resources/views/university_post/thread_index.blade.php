@@ -8,7 +8,7 @@
             
             <div class="panel panel-primary">
                 <div class="panel-heading" style="text-align:center;">
-                    <label> {{ config('thread.' . $id . '.name') }}のスレッド一覧</label>
+                    <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}のスレッド一覧</strong>
                 </div>
                 <p class="text-center">新しいスレッドはこちらのフォームで作成できます</p>
 

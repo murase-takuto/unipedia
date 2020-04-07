@@ -39,7 +39,7 @@
                                     {{ $lecture_infos[$i]['name'] }}
                                 </span>
                                 <br>
-                                <span style="font-size:x-small; background-color:white">
+                                <span style="font-size:x-small;">
                                     {{ $lecture_infos[$i]['room_number'] }}
                                 </span>
                             </a>

@@ -16,7 +16,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <p style="text-align:center;">
-                        <label>{{ $thread->title }}</label>
+                        <strong style="font-size: 16px">{{ $thread->title }}</strong>
                     </p>
                     <form method="post" action="{{ route('universityposts.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -45,7 +45,7 @@
                             <br>
                             @php
                                 $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
-                                $replace = '<a href="$1">$1</a>';
+                                $replace = '<a href="$1" target="_blank">$1</a>';
                                 $body = preg_replace($pattern, $replace, $post->body);
                             @endphp
                             @if ($post->image_path)

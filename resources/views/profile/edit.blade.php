@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary" style="margin-bottom:10px">
-                <div class="panel-heading" style="text-align: center">プロフィール編集</div>
+                <div class="panel-heading" style="text-align: center">
+                    <strong style="font-size: 16px">マイページ編集</strong>
+                </div>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

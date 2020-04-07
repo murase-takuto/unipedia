@@ -9,8 +9,8 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <h1 class="text-center" style="font-size:24px">
-                お問い合わせ
+            <h1 class="text-center">
+                <strong style="font-size: 16px">お問い合わせ</strong>
             </h1>
             <span class="text-center">
                 <p>Unipediaをご利用いただきありがとうございます。</p>
