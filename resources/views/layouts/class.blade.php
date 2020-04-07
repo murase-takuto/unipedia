@@ -140,10 +140,11 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <font size="1" color="#7e8183">
             <ul class="nav nav-pills" style="text-align: center">
-                <li id="schedule" class="navs" role="presentation" style="width: 24%"><a id="schedule_button" href="{{ route('schedules.index') }}"><i class="fas fa-th" style="font-size:24px"></i><p>時間割</p></a></li>
-                <li id="thread" class="navs" role="presentation" style="width: 25%"><a id="thread_button" href="{{ route('threads.index') }}"><i class="fas fa-edit" style="font-size:24px"></i><p>大学掲示板</p></a></li>
-                <li id="profile" class="navs" role="presentation" style="width: 25%"><a id="profile_button" href="{{ route('profile.index') }}"><i class="fas fa-graduation-cap" style="font-size:24px"></i><p>マイページ</p></a></li>
-                <li id="question" class="navs" role="presentation" style="width: 24%"><a id="question_button" href="{{ route('questions.index') }}"><i class="fas fa-info" style="font-size:24px"></i><p>お問い合わせ</p></a></li>
+                <li id="schedule" class="navs" role="presentation" style="width: 24%"><a id="schedule_button" href="{{ route('schedules.index') }}"><i class="fas fa-th" style="font-size:24px"></i><p style="font-size: x-small">時間割</p></a></li>
+                <li id="thread" class="navs" role="presentation" style="width: 25%"><a id="thread_button" href="{{ route('threads.index') }}"><i class="fas fa-edit" style="font-size:24px"></i><p style="font-size: x-small">大学掲示板</p></a></li>
+                <li id="profile" class="navs" role="presentation" style="width: 25%"><a id="profile_button" href="{{ route('profile.index') }}"><i class="fas fa-graduation-cap" style="font-size:24px"></i><p style="font-size: x-small">マイページ</p></a></li>
+                <li id="question" class="navs" role="presentation" style="width: 24%"><a id="question_button" href="{{ route('questions.index') }}"><i class="fas fa-info" style="font-size:24px"></i><p style="font-size: x-small":w
+                >お問い合わせ</p></a></li>
             </ul>
         </font>
     </nav>
