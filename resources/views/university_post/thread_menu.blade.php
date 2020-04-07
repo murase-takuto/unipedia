@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('message'))
-                <div class="alert alert-success">{{session('message')}}</div>
+                <div class="alert alert-success">{{ session('message') }}</div>
             @endif
 
             @if (session('error'))
-                <div class="alert alert-success">{{session('error')}}</div>
+                <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
             <input id="lefile" type="file" style="display:none">
             <div class="panel panel-primary">
