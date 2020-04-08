@@ -8,9 +8,9 @@
             
             <div class="panel panel-primary">
                 <div class="panel-heading" style="text-align:center;">
-                    <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}のスレッド一覧</strong>
+                    <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}の広場</strong>
                 </div>
-                <p class="text-center">新しいスレッドはこちらのフォームで作成できます</p>
+                <p class="text-center">自分で広場を作ってみよう！</p>
 
                 @if (session('message'))
                     <div class="alert alert-success">{{ session('message') }}</div>
@@ -32,9 +32,9 @@
                     {{ csrf_field() }}
                     <div class="input-group">
                         <input type="hidden" name="type_id" value="{{ $id }}">
-                        <input type="text" name="title" class="form-control" placeholder="スレッドのタイトルを入力">
+                        <input type="text" name="title" class="form-control" placeholder="広場の名前を決めよう！">
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info">新規スレッドを開く</button>
+                            <button type="submit" class="btn btn-info">広場をひらく</button>
                         </span>
                     </div>
                 </form>
@@ -43,14 +43,14 @@
                         @foreach ($threads as $thread)
                             <a class="list-group-item" href="{{ route('universityposts.show', ['id' => $thread->id]) }}" style="overflow-wrap: break-word">
                                 <font size="2" color="#7e8183">
-                                    {{ $thread->created_at }}にオープン
+                                    {{ $thread->created_at->format('Y年m月d日') }}にオープン
                                     閲覧数{{ $thread->count }}回
                                 </font>
                                 <p>{{ $thread->title }}</p>
                             </a>
                         @endforeach
                     @else
-                        <li class="list-group-item">スレッドはまだありません。</li>
+                        <li class="list-group-item">広場はまだありません。</li>
                     @endif
                 </div>
             </div>
