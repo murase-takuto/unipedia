@@ -20,8 +20,7 @@
                             <tr>
                                 <td colspan="2">
                                     <div class="text-center">
-                                        <label>授業名</label>
-                                        <p style="font-size: 20px">{{ $lecture->name }}</p>
+                                        <strong style="font-size: 20px">{{ $lecture->name }}の授業情報共有</strong>
                                     </div>
                                 </td>
                             </tr>
