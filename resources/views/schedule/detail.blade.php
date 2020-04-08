@@ -57,6 +57,7 @@
                             </span>
                         </div>
                     </form>
+                    <p class="text-center">みんなで授業情報を共有しよう！</p>
                 </div>
                 <ul class="list-group posts">
                     @if ($posts->isNotEmpty())
@@ -68,7 +69,7 @@
                             <br>
                             @php
                                 $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
-                                $replace = '<a href="$1">$1</a>';
+                                $replace = '<a href="$1" target="_blank">$1</a>';
                                 $body = preg_replace($pattern, $replace, $post->body);
                             @endphp
                             @if ($post->image_path)
