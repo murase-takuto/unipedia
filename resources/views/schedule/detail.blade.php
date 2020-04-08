@@ -73,7 +73,9 @@
                                 $body = preg_replace($pattern, $replace, $post->body);
                             @endphp
                             @if ($post->image_path)
-                                <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="サンプル画像">
+                                <a href="{{asset('storage/post_board_img/' . $post->image_path)}}">
+                                    <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="画像を表示できません">
+                                </a>
                             @else 
                                 <p style="overflow-wrap: break-word">
                                     {!! $body !!}
