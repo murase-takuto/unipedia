@@ -14,7 +14,7 @@
             <input id="lefile" type="file" style="display:none">
             <div class="panel panel-primary">
                 <div class="panel-heading" style="text-align:center">
-                    {{ config($pref_id . '.' . $university_id .'.name') }}の全体掲示板
+                    <strong style="font-size: 16px">{{ config($pref_id . '.' . $university_id .'.name') }}の情報共有ページ</strong>
                 </div>
                     @for ($i = 1; $i <= 4; $i++)
                         <div class="list-group" style="text-align:center;">
