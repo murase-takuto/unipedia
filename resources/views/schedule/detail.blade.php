@@ -81,7 +81,9 @@
                             @endif
                         </li>
                         @endforeach
-                        {{ $posts->links() }}
+                        <div class="text-center">
+                            {{ $posts->links() }}
+                        </div>
                     @else
                     <li class="list-group-item">この授業についての投稿はまだありません。</li>
                     @endif
