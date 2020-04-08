@@ -41,14 +41,13 @@
                 <ul class="list-group">
                     <a class="list-group-item" data-toggle="collapse" href="#question1">
                         <i class="fas fa-question"></i>
-                        所属している大学・学部・学科がありません。
+                        所属している大学・学部・学科がありません
                     </a>
                     <div class="collapse" id="question1">
                         <div class="well">
                             <i class="far fa-lightbulb"></i>
-                            <p>大学・学部・学科はキャンパスの所属する都道府県ごとに分類されております。</p>
-                            <p>今一度お客様が所属されている学部・学科のキャンパス所在地をご確認の上、都道府県選択からお試しください。</p>
-                            <p>お困りの場合は、お手数ですがUnipedia公式サイト、公式Twitter、公式Instagramのいずれかまでお問い合わせください。</p>
+                            <p>キャンパスの所在地をご確認の上、もう１度お試しください。</p>
+                            <p>解決できずお困りの場合は、お手数ですがUnipedia公式サイト、公式Twitter、公式Instagramのいずれかまでお問い合わせください。</p>
                         </div>
                     </div>
                     <a class="list-group-item" data-toggle="collapse" href="#question2">
@@ -59,17 +58,19 @@
                         <div class="well">
                             <i class="far fa-lightbulb"></i>
                             <p>申し訳ございません。</p>
-                            <p>現在は大学のみ対応しております。</p>
+                            <p>現在は4年制大学のみ対応しております。</p>
+                            <p>専門学生からのご要望が多ければ対応してさせていただきます。</p>
                         </div>
                     </div>
                     <a class="list-group-item" data-toggle="collapse" href="#question3">
                         <i class="fas fa-question"></i>
-                        Unipediaの利用に料金はかかりますか？
+                        使っていたら悪口をみつけました
                     </a>
                     <div class="collapse" id="question3">
                         <div class="well">
                             <i class="far fa-lightbulb"></i>
-                            料金は一切、いただいておりません。安心してご利用ください。
+                            <p>Unipediaはあなたの大学生活を笑顔にするサービスです。</p>
+                            <p>すぐにUnipedia公式サイト、公式Twitter、公式Instagramのいずれかまでお問い合わせください。</p>
                         </div>
                     </div>
                 </ul>

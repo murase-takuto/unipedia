@@ -33,7 +33,7 @@
                             <img src="storage/profile_img/default.png" class="img-circle" style="width:220px; height:220px; margin:20px auto;">
                         @endif
                         <br>
-                        <label>名前</label>
+                        <label>ニックネーム</label>
                         <p>{{ $user->name }}</p>
                         <br>
                         <label>大学</label>

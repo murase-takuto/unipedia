@@ -64,7 +64,7 @@
                         @foreach ($posts as $post)
                         <li class="list-group-item">
                             <font size="2" color="#7e8183">
-                                {{ $post->created_at }} 投稿者 {{ $post->user->name }}
+                                {{ $post->created_at->format('Y年m月d日') }} 投稿者 {{ $post->user->name }}
                             </font>
                             <br>
                             @php

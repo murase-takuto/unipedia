@@ -48,7 +48,7 @@
                             </div>
                             <span class="list-group-item" data-toggle="collapse" href="#name">
                                 <span class="glyphicon glyphicon-plus" style="font-size: 25px" aria-hidden="true"></span> 
-                                氏名
+                                ニックネーム
                             </span>
                             <div class="collapse" id="name">
                                 <div class="well">
@@ -84,12 +84,17 @@
                             </div>
                             <span class="list-group-item">
                                 現在のパスワード<span style="color: red">※必須</span>
-                                <div class="form-group">
+                                <div class="form-group" style="margin-bottom: 0px;">
                                     <input class="form-control" type="password" name="oldpass" required>
+                                    <div style="margin-top: 15px;">
+                                        <a href="{{ route('password.request') }}">
+                                            パスワードを忘れた場合はこちら
+                                        </a>
+                                    </div>
                                 </div>
                             </span>
                             <p class="text-center" style="margin-top: 10px">※変更を完了するには現在のパスワードが必要です。</p>
-                            <input type="submit" value="プロフィールを変更する" class="btn btn-info btn-block" style="margin: 5px 20%">
+                            <input type="submit" value="マイページを変更する" class="btn btn-info btn-block" style="margin: 5px 20%">
                         </div>
                     </form>
                 </div>
