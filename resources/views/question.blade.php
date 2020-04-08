@@ -22,13 +22,13 @@
             </a>
             <div class="btn__container">
                 <p>
-                    <a href="https://twitter.com/takuto_murase" class="btn-f" target="_blank" style="font-size:18px">
+                    <a href="https://twitter.com/unipedia_info" class="btn-f" target="_blank" style="font-size:18px">
                         <i class="fab fa-twitter"></i>
                         <span>公式Twitter</span>
                     </a>
                 </p>
                 <p>
-                    <a href="https://www.instagram.com/kei_to1212/?hl=ja" class="btn" target="_blank" style="font-size:18px">
+                    <a href="https://www.instagram.com/official_unipedia" class="btn" target="_blank" style="font-size:18px">
                         <i class="fab fa-instagram"></i>
                         <span>公式instagram</span>
                     </a>
