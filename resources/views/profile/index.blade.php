@@ -23,7 +23,7 @@
             @endif
             <div class="panel panel-primary" style="margin-bottom:10px">
                 <div class="panel-heading" style="text-align: center">
-                    <strong>マイページ</strong>
+                    <strong style="font-size: 16px">マイページ</strong>
                 </div>
                 <span class="text-center">
                     <div class="panel-body" style="text-align: center">
