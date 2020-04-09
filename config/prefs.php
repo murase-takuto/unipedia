@@ -2,7 +2,7 @@
 return [
     'university.hokkaido.hokkaido' => '北海道',
     'university.tohoku.aomori' => '青森県',
-    'university.tohoku.iwaate' => '岩手県',
+    'university.tohoku.iwate' => '岩手県',
     'university.tohoku.akita' => '秋田県',
     'university.tohoku.miyagi' => '宮城県',
     'university.tohoku.yamagata' => '山形県',
