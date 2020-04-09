@@ -17,6 +17,8 @@
 
 Auth::routes();
 
+Route::get('/', 'ScheduleController@index');
+
 //学生新規登録
 Route::group(['namespace' => 'Student',], function() {
     Route::get('prefectures', 'RegisterSchoolController@selectPref')->name('select.pref');
