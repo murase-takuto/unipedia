@@ -9,6 +9,11 @@
                     {{ session('status') }}
                 </div>
             @endif
+            <div class="alert alert-warning">
+                <a href="{{ route('threads.show', ['id' => 5]) }}">
+                    【新入生向け】履修相談はこちら！
+                </a>
+            </div>
             <table border=1>
                 <tr>
                     <th bgcolor="#E4E5E9" width="4%"></th>
