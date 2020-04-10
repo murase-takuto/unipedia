@@ -28,7 +28,7 @@
                                 <label>
                                     <span class="btn btn-info">
                                         <i class="fas fa-camera"></i>
-                                        <input type="file" name="image" class="form-control" style="display:none">
+                                        <input type="file" name="image" class="form-control" style="display:none" accept="image/*">
                                     </span>
                                 </label>
                                 <input type="submit" class="btn btn-info" value="投稿する">
