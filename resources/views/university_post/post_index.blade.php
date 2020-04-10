@@ -28,7 +28,7 @@
                                 <label>
                                     <span class="btn btn-info">
                                         <i class="fas fa-camera"></i>
-                                        <input type="file" name="image" class="form-control" style="display:none">
+                                        <input type="file" name="image" id="putImage" class="form-control" style="display:none">
                                     </span>
                                 </label>
                                 <input type="submit" class="btn btn-info" value="投稿する">
@@ -67,9 +67,8 @@
         </div>
     </div>
 </div>
-<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-    $(function () {
+    jQuery(function ($) {
         $('#putImage').on('change', function (e) {
             var file = e.target.files[0];
             var reader = new FileReader();
