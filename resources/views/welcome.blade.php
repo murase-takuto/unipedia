@@ -65,6 +65,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -144,6 +145,5 @@
                 @endguest
             </div>
         </div>
-    <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
