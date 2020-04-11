@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Student;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ClassAddRequest;
 use App\Http\Requests\ClassPostRequest;
 use App\Schedule;
 use App\Lecture;
 use App\Post;
-use DB;
-use Image;
-use phpDocumentor\Reflection\Types\Null_;
 
 class ClassController extends Controller
 {
@@ -112,26 +112,37 @@ class ClassController extends Controller
     //授業登録時に時間割表も更新する
     public function update(ClassAddRequest $request, $id)
     {
-        $user_info = Auth::user();
-        //授業情報関係 //classesテーブル
-        $lecture = Lecture::updateOrCreate([
-            'university_id' => $user_info->university_id,
-            'fuculty_id' => $user_info->fuculty_id,
-            'subject_id' => $user_info->subject_id,
-            'name' => $request->name,
-            //$idは何曜何限かの情報
-            'day_id' => $id,
-        ], [
-            'teacher' => $request->teacher,
-            'room_number' => $request->room_number
-        ]);
-        $lecture_id = $lecture->id;
-        $day_id = $lecture->day_id;
-        //ユーザーの時間割表更新
-        $schedule = Schedule::where('user_id', $user_info->id)->first();
-        $class_id = 'class_' . $day_id;
-        $schedule->$class_id = $lecture_id;
-        $schedule->save();
+        if (Config::has('time.' . $id)) {
+            DB::beginTransaction();
+            try {
+                $user_info = Auth::user();
+                //授業情報関係 //classesテーブル
+                $lecture = Lecture::updateOrCreate([
+                    'university_id' => $user_info->university_id,
+                    'fuculty_id' => $user_info->fuculty_id,
+                    'subject_id' => $user_info->subject_id,
+                    'name' => $request->name,
+                    //$idは何曜何限かの情報
+                    'day_id' => $id,
+                ], [
+                    'teacher' => $request->teacher,
+                    'room_number' => $request->room_number
+                ]);
+                $lecture_id = $lecture->id;
+                $day_id = $lecture->day_id;
+                //ユーザーの時間割表更新
+                $schedule = Schedule::where('user_id', $user_info->id)->first();
+                $class_id = 'class_' . $day_id;
+                $schedule->$class_id = $lecture_id;
+                $schedule->save();
+                DB::commit();
+            } catch (\Exception $e) {
+                DB::rollback();
+            };
+        } else {
+            return redirect()->back()
+                ->with('error', '登録に失敗しました。');   
+        }
 
         return redirect()->route('schedules.index')
             ->with('status', '授業を登録しました');
