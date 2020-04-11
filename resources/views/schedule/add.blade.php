@@ -7,7 +7,9 @@
                 <div class="panel-heading" style="text-align: center">
                     <strong style="font-size: 16px">{{ config('time.' . $day_id) }} 授業登録</strong>
                 </div>
-                
+                @if (session('error'))
+                    <div class="alert alert-danger" style="margin-top: 15px;">{{ session('error') }}</div>
+                @endif
                 <div class="panel-body">
                     <div class="already_classes">
                         <!--<div class="list-group">-->
