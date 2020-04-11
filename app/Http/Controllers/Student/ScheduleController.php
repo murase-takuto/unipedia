@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Student;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Lecture;
 use App\Schedule;
+use Exception;
 
 class ScheduleController extends Controller
 {
@@ -18,17 +20,21 @@ class ScheduleController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $infos = Schedule::firstOrCreate(['user_id' => $user_id]);
-        //配列の番号と時間割の番号を合わせるため、はじめにnullを入れておく
-        $lecture_infos[] = null;
-        for ($i = 1; $i <= 36; $i++) {
-            $class_id = 'class_' . $i;
-            $color_id = 'color_' . $i;
-            if ($infos->$class_id != null) {
-                $lecture_infos[] = Lecture::where('id', $infos->$class_id)->first();
-            } else {
-                $lecture_infos[] = null;
+        if ($user_id) {
+            $infos = Schedule::firstOrCreate(['user_id' => $user_id]);
+            //配列の番号と時間割の番号を合わせるため、はじめにnullを入れておく
+            $lecture_infos[] = null;
+            for ($i = 1; $i <= 36; $i++) {
+                $class_id = 'class_' . $i;
+                $color_id = 'color_' . $i;
+                if ($infos->$class_id != null) {
+                    $lecture_infos[] = Lecture::where('id', $infos->$class_id)->first();
+                } else {
+                    $lecture_infos[] = null;
+                }
             }
+        } else {
+            return view('auth.login');
         }
         return view('schedule.index', compact('infos', 'lecture_infos'));
     }
@@ -53,13 +59,19 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        $class = Lecture::find($request->id);
-        ++$class->count;
-        $class->save();
-        $schedule = Schedule::where('user_id', Auth::id())->first();
-        $class_id = 'class_' . $class->day_id;
-        $schedule->$class_id = $class->id;
-        $schedule->save();
+        DB::beginTransaction();
+        try {
+            $class = Lecture::find($request->id);
+            ++$class->count;
+            $class->save();
+            $schedule = Schedule::where('user_id', Auth::id())->first();
+            $class_id = 'class_' . $class->day_id;
+            $schedule->$class_id = $class->id;
+            $schedule->save();
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollback();
+        };
         return redirect()->route('schedules.index')->with('status', '授業を登録しました');   
     }
 

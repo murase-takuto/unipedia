@@ -8,7 +8,7 @@
             
             <div class="panel panel-primary">
                 <div class="panel-heading" style="text-align:center;">
-                    <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}の広場</strong>
+                    <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}</strong>
                 </div>
                 <p class="text-center">自分で広場を作ってみよう！</p>
 

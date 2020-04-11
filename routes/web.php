@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('/', 'Student\ScheduleController@index');
 
 //学生新規登録
 Route::group(['namespace' => 'Student',], function() {

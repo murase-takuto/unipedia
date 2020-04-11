@@ -25,6 +25,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body>
@@ -60,8 +63,6 @@
         </font>
     </nav>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
     <script>
         jQuery(function() {
             $('#schedule').on('click', function(){

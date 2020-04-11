@@ -24,6 +24,12 @@
                             </a>
                         </div>
                     @endfor
+                    <div class="list-group" style="text-align:center;">
+                        <a class="list-group-item list-group-item-warning" href="{{ route('threads.show', ['id' => 5]) }}">
+                            <p class="list-group-item-heading" style="font-size:16px">{{ config('thread.' . 5 . '.name') }}</p>
+                            <p style="font-size:11px">{{ config('thread.' . 5 . '.detail') }}</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
