@@ -18,17 +18,21 @@ class ScheduleController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $infos = Schedule::firstOrCreate(['user_id' => $user_id]);
-        //配列の番号と時間割の番号を合わせるため、はじめにnullを入れておく
-        $lecture_infos[] = null;
-        for ($i = 1; $i <= 36; $i++) {
-            $class_id = 'class_' . $i;
-            $color_id = 'color_' . $i;
-            if ($infos->$class_id != null) {
-                $lecture_infos[] = Lecture::where('id', $infos->$class_id)->first();
-            } else {
-                $lecture_infos[] = null;
+        if ($user_id) {
+            $infos = Schedule::firstOrCreate(['user_id' => $user_id]);
+            //配列の番号と時間割の番号を合わせるため、はじめにnullを入れておく
+            $lecture_infos[] = null;
+            for ($i = 1; $i <= 36; $i++) {
+                $class_id = 'class_' . $i;
+                $color_id = 'color_' . $i;
+                if ($infos->$class_id != null) {
+                    $lecture_infos[] = Lecture::where('id', $infos->$class_id)->first();
+                } else {
+                    $lecture_infos[] = null;
+                }
             }
+        } else {
+            return view('auth.login');
         }
         return view('schedule.index', compact('infos', 'lecture_infos'));
     }
