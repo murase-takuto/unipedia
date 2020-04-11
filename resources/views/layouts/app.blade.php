@@ -9,7 +9,18 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}｜大学生のための情報共有広場</title>
+
+    <!--metaタグ-->
+    <meta content="全国の大学生必須の時間割・授業情報共有アプリ。このアプリで大学生活がガラッと変わる。簡単登録ですぐに使える！過去問や試験範囲など授業について情報共有はもちろん、サークルなど学生生活の情報発信もこのアプリひとつですべて解決！" name="description">
+
+    <!--OGPタグ-->
+    <meta property="og:title" content="大学生のための情報共有広場｜Unipedia" />
+    <meta property="og:type" content="ページの種類" />
+    <meta property="og:url" content="https://unipedia-official.com/login" />
+    <meta property="og:image" content="サムネイル画像の URL" />
+    <meta property="og:site_name" content="Unipedia" />
+    <meta property="og:description" content="全国の大学生必須の時間割・授業情報共有アプリ。このアプリで大学生活がガラッと変わる。簡単登録ですぐに使える！過去問や試験範囲など授業について情報共有はもちろん、サークルなど学生生活の情報発信もこのアプリひとつですべて解決" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
