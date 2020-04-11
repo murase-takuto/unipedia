@@ -121,9 +121,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" style="margin: 0 auto">さっそく使ってみる</button>
-                            </div>
+                            @guest
+                                <div class="modal-footer">
+                                    <a href="{{ route('select.pref') }}" class="btn btn-primary btn-block">新規登録はこちら</a>
+                                </div>
+                            @endguest
                         </div>
                     </div>
                 </div>
@@ -137,6 +139,8 @@
                 <a href="#" class="btn btn-info btn-block" data-toggle="modal" data-target="#sampleModal"><p class="text-capitalize">Unipediaとは？</p></a>
                 @guest
                     <a href="{{ route('select.pref') }}" class="btn btn-primary btn-block">新規登録はこちら</a>
+                @else
+                    <a href="{{ route('schedules.index') }}" class="btn btn-primary btn-block">時間割へ</a>
                 @endguest
             </div>
         </div>
