@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ route('schedules.index') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
