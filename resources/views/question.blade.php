@@ -17,7 +17,7 @@
                 <p>お問い合わせはUnipedia公式サイト</p>
                 <p>または公式SNSにて受け付けております。</p>
             </span>
-            <a class="btn btn-info btn-block" href="https://peraichi.com/landing_pages/view/xewmz" target="_blank">
+            <a class="btn btn-info btn-block" href="https://www.unipedia-official.com" target="_blank">
                 Unipedia公式サイト
             </a>
             <div class="btn__container">
