@@ -44,9 +44,11 @@
                             </font>
                             <br>
                             @php
-                                $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
-                                $replace = '<a href="$1" target="_blank">$1</a>';
-                                $body = preg_replace($pattern, $replace, $post->body);
+                                if (strpos($post->body, 'http') !== false) {
+                                    $pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
+                                    $replace = '<a href="$1" target="_blank">$1</a>';
+                                    $url = preg_replace($pattern, $replace, $post->body);
+                                }
                             @endphp
                             @if ($post->image_path)
                                 <a href="{{asset('storage/post_board_img/' . $post->image_path)}}">
@@ -54,7 +56,11 @@
                                 </a>
                             @else 
                                 <p style="overflow-wrap: break-word">
-                                    {!! $body !!}
+                                    @if (isset($url))
+                                        {!! $url !!}
+                                    @else
+                                        {{ $post->body }}
+                                    @endif
                                 </p>
                             @endif
                         </li>
