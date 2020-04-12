@@ -95,23 +95,18 @@
                             </div>
                             <div class="modal-body">
                                 <div id="sampleCarousel" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li class="active" data-target="#sampleCarousel" data-slide-to="0"></li>
-                                        <li data-target="#sampleCarousel" data-slide-to="1"></li>
-                                        <li data-target="#sampleCarousel" data-slide-to="2"></li>
-                                    </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active">
-                                            <img src="{{asset('storage/explain000.jpg')}}" alt="画像を表示できません">
+                                            <p><img src="{{asset('storage/explain000.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <img src="{{asset('storage/explain001.jpg')}}" alt="画像を表示できません">
+                                            <p><img src="{{asset('storage/explain001.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <img src="{{asset('storage/explain002.jpg')}}" class="img-responsive" alt="画像を表示できません">
+                                            <p><img src="{{asset('storage/explain002.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <img src="{{asset('storage/explain003.jpg')}}" class="img-responsive" alt="画像を表示できません">
+                                            <p><img src="{{asset('storage/explain003.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                     </div>
                                     <a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
