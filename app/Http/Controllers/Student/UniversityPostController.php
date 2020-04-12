@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Student;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PostRequest;
 use Intervention\Image\Facades\Image;
 use App\Thread;
 use App\UniversityPost;
@@ -38,9 +39,14 @@ class UniversityPostController extends Controller
      * @return \Illuminate\Http\Response
      */
     //ここで新規投稿
-    public function store(Request $request)
+    public function store(PostRequest $request, UniversityPost $university_post)
     {
-        $university_post = new UniversityPost;
+
+        if (!$request->body && !$request->image) {
+            return redirect()->back()
+                ->with('error', '投稿に失敗しました');
+        }
+
         //投稿内容required validation
         if ($request->file('image')) {
             $img = Image::make($request->image);
@@ -57,7 +63,7 @@ class UniversityPostController extends Controller
         $university_post->thread_id = $request->thread_id;
         $university_post->save();
         return redirect()->back()
-            ->with($result === true ? 'message' : 'error', $result === true ? '画像を投稿しました' : '投稿しました');
+            ->with('message', $result === true ? '画像を投稿しました' : '投稿しました');
     }
 
     /**

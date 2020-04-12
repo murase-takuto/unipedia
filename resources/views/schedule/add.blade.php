@@ -59,7 +59,7 @@
                                         <div class="form-group{{ $errors->has('teacher') ? ' has-error' : '' }}">
                                             <label for="teacher" class="col-sm-2 control-label">担当教員</label>
                                             <div class="col-sm-10">
-                                                <input id="teacher" type="text" class="form-control" name="teacher" required>
+                                                <input id="teacher" type="text" class="form-control" name="teacher">
                                                 @if ($errors->has('teacher'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('teacher') }}</strong>

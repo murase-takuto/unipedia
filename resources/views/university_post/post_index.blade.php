@@ -9,13 +9,13 @@
             @endif
 
             @if (session('error'))
-                <div class="alert alert-success">{{ session('error') }}</div>
+                <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
 
             @if(count($errors) > 0)
                 <ul class="alert alert-danger"　style="list-style: none;">
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li style="list-style: none;">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif
@@ -32,7 +32,7 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <input type="hidden" name="thread_id" value="{{ $thread->id }}">
-                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0; border-color:#4285F3; border-bottom:none; border-bottom-left-radius: 0;border-bottom-right-radius: 0;"></textarea>
+                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0; border-color:#4285F3; border-bottom:none; border-bottom-left-radius: 0;border-bottom-right-radius: 0; resize: none;"></textarea>
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn btn-info" style="border-radius: 0;">

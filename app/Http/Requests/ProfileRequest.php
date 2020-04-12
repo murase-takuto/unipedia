@@ -38,4 +38,11 @@ class ProfileRequest extends FormRequest
             'oldpass' => 'required|string|min:6',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'newpass_confirmation.min' => ':attributeに間違いがあります',
+        ];
+    }
 }
