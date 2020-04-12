@@ -6534,6 +6534,7 @@ button.close {
   max-width: 100%;
   height: auto;
   line-height: 1;
+  margin: 0 auto;
 }
 @media (-webkit-transform-3d), (transform-3d) {
   .carousel-inner > .item {
@@ -6615,13 +6616,13 @@ button.close {
     linear,
     left top,
     right top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0.0001))
+    /*from(rgba(0, 0, 0, 0.5)),
+    to(rgba(0, 0, 0, 0.0001))*/
   );
   background-image: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0.0001)
+    /*rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.0001)*/
   );
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80000000",endColorstr="#00000000",GradientType=1);
@@ -6633,13 +6634,13 @@ button.close {
     linear,
     left top,
     right top,
-    from(rgba(0, 0, 0, 0.0001)),
-    to(rgba(0, 0, 0, 0.5))
+    /*from(rgba(0, 0, 0, 0.0001)),
+    to(rgba(0, 0, 0, 0.5))*/
   );
   background-image: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.0001) 0,
-    rgba(0, 0, 0, 0.5)
+    /*rgba(0, 0, 0, 0.0001) 0,
+    rgba(0, 0, 0, 0.5)*/
   );
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000",endColorstr="#80000000",GradientType=1);

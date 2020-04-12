@@ -11,13 +11,16 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->route('schedules.index');
+    }    
+    return view('welcome');
+});
 
 Auth::routes();
 
-Route::get('/', 'Student\ScheduleController@index');
+//Route::get('/', 'Student\ScheduleController@index');
 
 //学生新規登録
 Route::group(['namespace' => 'Student',], function() {
