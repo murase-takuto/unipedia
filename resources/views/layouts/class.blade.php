@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Unipedia') }}｜大学生のための情報共有広場</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -85,7 +85,6 @@
                         <p class="modal-title">時間割表のコマの色を変更できます。</p>
                     </div>
                     <div class="modal-body">
-                        <p class="text-center">以下の中から好きな色を選んでください。</p>
                         <form class="form-horizontal" id="class-color-change" action="{{ route('schedules.update', [$id]) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}

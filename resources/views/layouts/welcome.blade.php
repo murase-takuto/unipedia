@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}｜大学生のための情報共有広場</title>
+    <title>{{ config('app.name', 'Unipedia') }}｜大学生のための情報共有広場</title>
 
     <!--metaタグ-->
     <meta content="全国の大学生必須の時間割・授業情報共有アプリ。このアプリで大学生活がガラッと変わる。簡単登録ですぐに使える！過去問や試験範囲など授業について情報共有はもちろん、サークルなど学生生活の情報発信もこのアプリひとつですべて解決！" name="description">
