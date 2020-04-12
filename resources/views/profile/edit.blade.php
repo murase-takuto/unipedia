@@ -86,11 +86,6 @@
                                 現在のパスワード<span style="color: red">※必須</span>
                                 <div class="form-group" style="margin-bottom: 0px;">
                                     <input class="form-control" type="password" name="oldpass" required>
-                                    <div style="margin-top: 15px;">
-                                        <a href="{{ route('password.request') }}">
-                                            パスワードを忘れた場合はこちら
-                                        </a>
-                                    </div>
                                 </div>
                             </span>
                             <p class="text-center" style="margin-top: 10px">※変更を完了するには現在のパスワードが必要です。</p>
