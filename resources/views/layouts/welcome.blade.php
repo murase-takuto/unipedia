@@ -27,6 +27,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body>
@@ -35,30 +36,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script>
-        jQuery(function() {
-            $('#schedule').on('click', function(){
-                $('.navs').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            $('#thread').on('click', function(){
-                $('.navs').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            $('#profile').on('click', function(){
-                $('.navs').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            $('#question').on('click', function(){
-                $('.navs').removeClass('active');
-                $(this).addClass('active');
-            });
-        })
-    </script>
 </body>
 
 </html>
