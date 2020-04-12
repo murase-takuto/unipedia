@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ route('schedules.index') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
