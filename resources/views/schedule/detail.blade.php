@@ -42,22 +42,22 @@
                     </table>
                     <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="input-group">
+                        <div class="form-group" style="width:auto; margin: 0 1px">
                             <input type="hidden" name="class_id" value="{{ $id }}">
-                            <input type="text" name="body" class="form-control" placeholder="ここにテキストを入力">
-                            <span class="input-group-btn">
-                                <img id="preview" style="width:35px;height:35px;">
-                                <label>
-                                    <span class="btn btn-info">
+                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0 1px;"></textarea>
+                            <div class="input-group">
+                                <label class="input-group-btn">
+                                    <span class="btn btn-info" style="border-radius: 0;">
                                         <i class="fas fa-camera"></i>
-                                        <input type="file" name="image" id="putImage" class="form-control" style="display:none">
+                                        <input type="file" name="image" class="form-control" style="display:none;border-top-right-radius:0; border-bottom-right-radius:0;">
                                     </span>
                                 </label>
-                                <input type="submit" class="btn btn-info" value="投稿する">
-                            </span>
+                                <input type="text" class="form-control" placeholder="選択された画像の名前" style="border-radius: 0;" readonly>
+                            </div>
+                            <input type="submit" class="btn btn-info btn-block" value="投稿する" style="margin:0 1px; width:100%; border-top:none; border-top-left-radius:0; border-top-right-radius:0;"> 
                         </div>
                     </form>
-                    <p class="text-center">みんなで授業情報を共有しよう！</p>
+                    <p class="text-center" style="margin-top: 4px">みんなで授業情報を共有しよう！</p>
                 </div>
                 <ul class="list-group posts">
                     @if ($posts->isNotEmpty())
@@ -95,19 +95,25 @@
     </div>
 </div>
 <script>
-    jQuery(function($) {
-        $('#putImage').on('change', function(e) {
+    jQuery(function ($) {
+        /*$('#putImage').on('change', function (e) {
             var file = e.target.files[0];
             var reader = new FileReader();
-            if (file.type.indexOf("image") < 0) {
+            if(file.type.indexOf("image") < 0){
                 alert("画像ファイルを指定してください。");
                 return false;
             }
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 $("#preview").attr('src', e.target.result);
             }
             reader.readAsDataURL(file);
-        })
-    })
+        })*/
+        $(document).on('change', ':file', function() {
+            var input = $(this),
+            numFiles = input.get(0).files ? input.get(0).files.length : 1,
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.parent().parent().next(':text').val(label);
+            });
+        });
 </script>
 @endsection
