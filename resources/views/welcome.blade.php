@@ -98,16 +98,16 @@
                                 <div id="sampleCarousel" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active">
-                                            <p><img src="{{asset('storage/explain000.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <p><img src="{{asset('storage/welcome_img/explain000.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/explain001.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <p><img src="{{asset('storage/welcome_img/explain001.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/explain002.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <p><img src="{{asset('storage/welcome_img/explain002.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/explain003.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <p><img src="{{asset('storage/welcome_img/explain003.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
                                         </div>
                                     </div>
                                     <a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
@@ -128,7 +128,7 @@
                 </div>
                 <div class="links">
                     <a href="#" data-toggle="modal" data-target="#sampleModal"><p class="text-capitalize">Unipediaにできること</p></a>
-                    <a href="https://peraichi.com/landing_pages/view/xewmz" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
+                    <a href="https://www.unipedia-official.com" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
                     <a href="{{ route('questions.index') }}" target="_blank"><p class="text-capitalize">お問い合わせ</p></a>
                     <a href="https://twitter.com/unipedia_info" target="_blank"><p class="text-capitalize">Twitter</p></a>
                     <a href="https://www.instagram.com/official_unipedia" target="_blank"><p class="text-lowercase">instagram</p></a>
