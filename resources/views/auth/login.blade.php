@@ -49,11 +49,6 @@
                             </div>
                         </div>
                     </form>
-                    <div  class="text-center">
-                        <a href="{{ route('password.request') }}">
-                            パスワードを忘れた場合はこちら
-                        </a>
-                    </div>
                 </div>
             </div>
             <a class="btn btn-primary btn-block" href="{{ route('select.pref') }}">
