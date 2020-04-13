@@ -63,16 +63,16 @@
                                 <a href="{{asset('storage/post_board_img/' . $post->image_path)}}">
                                     <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="画像を表示できません">
                                 </a>
-                            @else 
-                                <p style="overflow-wrap: break-word">
-                                    @if (isset($url))
-                                        {!! $url !!}
-                                    @else
-                                        {{ $post->body }}
-                                    @endif
-                                </p>
                             @endif
+                            <p style="overflow-wrap: break-word">
+                                @if (isset($url))
+                                    {!! $url !!}
+                                @else
+                                    {{ $post->body }}
+                                @endif
+                            </p>
                         </li>
+                        <?php $url = NULL; ?>
                     @endforeach
                     <div class="text-center">
                         {{ $posts->links() }}

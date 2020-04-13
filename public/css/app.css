@@ -6616,7 +6616,6 @@ button.close {
     linear,
     left top,
     right top,
-    /*下の二箇所をコメントアウト*/
     /*from(rgba(0, 0, 0, 0.5)),
     to(rgba(0, 0, 0, 0.0001))*/
   );
