@@ -12,7 +12,7 @@
                 <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
             <input id="lefile" type="file" style="display:none">
-            <div class="panel panel-primary">
+            <div class="panel panel-info">
                 <div class="panel-heading" style="text-align:center">
                     <strong style="font-size: 16px">{{ config($pref_id . '.' . $university_id .'.name') }}の情報共有ページ</strong>
                 </div>
