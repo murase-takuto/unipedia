@@ -50,6 +50,11 @@
                                 授業のコマの色を変更する
                             </a>
                         </li>
+                        <li class="dropdown">
+                            <a class="btn btn-info" data-toggle="modal" href="{{ route('schedules.index') }}" style="border-color:transparent">
+                                時間割へ戻る
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
