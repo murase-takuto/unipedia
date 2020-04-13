@@ -48,7 +48,7 @@
                     <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <input type="hidden" name="class_id" value="{{ $id }}">
+                            <input type="hidden" name="id" value="{{ $lecture->id }}">
                             <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0; border-color:#4285F3; border-bottom:none; border-bottom-left-radius: 0;border-bottom-right-radius: 0;"></textarea>
                             <div class="input-group">
                                 <label class="input-group-btn">
@@ -92,10 +92,11 @@
                                     @endif
                                 </p>
                             @endif
+                            <?php $url = NULL; ?>
                         </li>
                         @endforeach
                         <div class="text-center">
-                            {{ $posts->links() }}
+                            {{ $posts->appends($class)->links() }}
                         </div>
                     @else
                     <li class="list-group-item">この授業についての投稿はまだありません。</li>
