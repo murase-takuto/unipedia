@@ -48,7 +48,8 @@ class UniversityPostController extends Controller
             $img->save(storage_path() . '/app/public/post_board_img/' .  $img_path);
             $university_post->image_path = $img_path;
             $result = true;
-        } else {
+        }
+        if ($request->body) {
             $university_post->body = $request->body;
             $result = false;
         }
