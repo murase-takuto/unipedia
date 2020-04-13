@@ -83,20 +83,19 @@
                                 <a href="{{asset('storage/post_board_img/' . $post->image_path)}}">
                                     <img src="{{asset('storage/post_board_img/' . $post->image_path)}}" class="img-responsive" alt="画像を表示できません">
                                 </a>
-                            @else 
-                                <p style="overflow-wrap: break-word">
-                                    @if (isset($url))
-                                        {!! $url !!}
-                                    @else
-                                        {{ $post->body }}
-                                    @endif
-                                </p>
                             @endif
+                            <p style="overflow-wrap: break-word">
+                                @if (isset($url))
+                                    {!! $url !!}
+                                @else
+                                    {{ $post->body }}
+                                @endif
+                            </p>
                             <?php $url = NULL; ?>
                         </li>
                         @endforeach
                         <div class="text-center">
-                            {{ $posts->appends($class)->links() }}
+                            {{ $posts->appends(['class_id' => $class])->links() }}
                         </div>
                     @else
                     <li class="list-group-item">この授業についての投稿はまだありません。</li>

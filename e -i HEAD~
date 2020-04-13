@@ -1,0 +1,270 @@
+583ea5b [update] resolve conflicts
+2ae8d4b マージ先 feature/modify-text-form (プルリクエスト #108)
+0b30442 マージ先 feature/add-sns-link (プルリクエスト #109)
+b031126 マージ先 feature/modify-questions (プルリクエスト #104)
+cec8054 [fix] modify select class infos
+5ff7b7e [update] 掲示板の背景色を白に変更
+832483b [update]よくある質問の解答内にHP,SNSのリンクを追加
+54c820f マージ先 feature/#39_update_formrequest (プルリクエスト #107)
+c072f8e マージ先 feature/#38_fix_posts (プルリクエスト #106)
+1032542 マージ先 feature/#16_modify_title (プルリクエスト #105)
+03079c9 [update]掲示板投稿フォームのレイアウトを大幅変更
+46c6abb [update] make form request view
+b8bcba5 [fix] modify post XSS
+60b4598 [update] modify title
+fa82dad [fix] 未ログインの場合に波バーを表示させないように修正
+84eeeb7 マージ先 feature/modyfy-welcome-img (プルリクエスト #103)
+9c833da [fix] app.cssのコメントアウト
+6df434d マージ先 feature/remove_reset_passwords (プルリクエスト #102)
+7008de6 [remove] remove reset passwords form
+50a1a88 マージ先 feature/modify-color-change-form (プルリクエスト #101)
+e526f84 [update]授業のコマの色変更フォームの見た目変更
+f67520e マージ先 feature/modify_redirect_after_login (プルリクエスト #100)
+3eb406f [update] modify after login redirect
+9196ed0 マージ先 feature/#15_modify_modal_img (プルリクエスト #99)
+ad9cf6f [update] modify welcome images
+d11d0e1 マージ先 feature/update-welcome-page-fadeIn (プルリクエスト #98)
+49d2834 [update]welcomeページをフェードインで表示されるように修正
+7a7aab0 マージ先 feature/update-welcome-page (プルリクエスト #97)
+804b76b [fix]コメントアウトの削除
+dce41d0 [fix]scriptタグの位置変更
+f305787 [fix]layout/welcome.bladeの不要部分削除
+c8d6541 [update]モーダルの縦幅をレスポンシブに修正
+a3af6f2 [fix]ルーティングの変更
+a475a7d [fix]scriptタグの位置を変更
+474177a [fix]細かいルーティング、レイアウトの修正を入れました。
+16c77ee [update] unipedia-official.com/のルーティングを変更
+9de8f67 [fix]コンフリクト修正
+8745cc6 [update] welcomeページの修正
+cdb505a マージ先 feature/#13_modify_add_schedules (プルリクエスト #96)
+0869b43 マージ先 feature/#14_modify_domain_redirect (プルリクエスト #95)
+f914f71 [fix] modify add schedules
+810d06a [update] only domain redirect
+0c25118 [fix] iphoneでの画像選択時にカメラロールから画像選択できるように修正
+78bd3bb マージ先 feature/upadte-thread (プルリクエスト #94)
+eb679f8 [update] 新入生むけ履修相談広場を新設
+17666b3 マージ先 fix/image_preview_20204010 (プルリクエスト #93)
+62876a1 [fix] image preview
+5202329 マージ先 fix/update_routes_20200410 (プルリクエスト #92)
+ad5f11c マージ先 feature/hotfix-prefs.php (プルリクエスト #91)
+3893c78 [fix] update routes
+5a7f20e [hotfix] config/prefs.phpの岩手県を修正
+c20428c マージ先 feature/delete_routes (プルリクエスト #90)
+00dce03 [delete] delete routes
+fa61fd8 マージ先 feature/modify-config3 (プルリクエスト #89)
+82f6023 [fix] 沖縄までの大学の並びを五十音順に修正
+b6e26cd マージ先 feature/modify-config-2 (プルリクエスト #88)
+80afaa8 [fix]config内の修正
+098cb51 マージ先 feature/enable-iamge-to-link (プルリクエスト #87)
+10aa8f8 マージ先 feature/modify-config (プルリクエスト #86)
+1612ee5 [fix]config（北海道から千葉）の修正
+d72587c [update]投稿した画像をリンク化してクリックしたら元の画像（レスポンシブ化前）を表示
+b54b4a2 マージ先 feature/modify-schedule-index-font-weight (プルリクエスト #85)
+3efabe5 [update] 時間割表の文字の太さを変更
+ef3c593 マージ先 feature/modify-config-kanagawa-osaka-kyoto (プルリクエスト #84)
+f577edf マージ先 feature/update_wording (プルリクエスト #83)
+3b98779 [update] config内の神奈川、京都、大阪の大学の並び順を五十音順に変更しました。
+c4d5f5e [update] update question/pref
+bed4789 マージ先 feature/update_total_layouts_conflicts (プルリクエスト #82)
+1fe410a Merge branch 'develop' of https://bitbucket.org/homiesinc/test into feature/update_total_layouts_conflicts [update] コンフリクト修正
+02e986d [update] update total detail layouts
+c07f992 マージ先 feature/modify-detail-contexts (プルリクエスト #80)
+c6c875f マージ先 feature/modify-pagenate-location (プルリクエスト #79)
+e836af8 [add] SNS公式アカウントへのリンクを追加
+a81a034 [fix] 文言と色の修正
+c12e4ef [fix] ページネートのボタンの位置を中央よせに変更
+56b6de5 マージ先 feature/fix-redirect-after-logout (プルリクエスト #78)
+50fc9d7 [fix] リダイレクトの修正漏れをコミット
+ed23d71 マージ先 feature/modify-profile-edit (プルリクエスト #77)
+271e74a [update] プロフィール画像編集ボタンの修正
+200626b マージ先 feature/update_routing (プルリクエスト #76)
+6da2a21 マージ先 feature/fix_profile_directories (プルリクエスト #74)
+5fe72f5 [update] update login routing
+fbb2849 Merge branch 'develop' of https://bitbucket.org/homiesinc/test into develop
+0d5a2bd マージ先 feature/modify-schedule-index (プルリクエスト #75)
+d3f649f [fix] 細かな修正
+74be98d マージ先 feature/update_U-Post_methods (プルリクエスト #72)
+55fa261 [fix] profile directory path
+fb93eee [update] modify university posts methods
+d67ae9b マージ先 feature/enable-posts-URL (プルリクエスト #71)
+263fb39 [fix] 投稿にURLが含まれていた場合の挙動の修正
+7e4db2b feature/checge-mypage-layout を develop にマージしました。
+bc888be [fix] 画像のプレビューの表示サイズを指定
+4c37f09 [update] マイページの機能追加
+f12f1c8 マージ先 feature/modify_posts_url (プルリクエスト #70)
+6e807bc [update] modify posts links
+a465e7a マージ先 feature/modify_register_layouts (プルリクエスト #69)
+e9294b0 [update] register form layouts
+50572d3 マージ先 feature/checge-image-treatment (プルリクエスト #68)
+036c0fa [update] 画像保存型式の変更
+8339f87 マージ先 feature/add-color-change-function (プルリクエスト #67)
+52c06d3 [hot-fix] コンフリクトの解消追加
+66cddf7 [hot-fix]コンフリクトの解消
+b6fcfea マージ先 feature/modify-class-layout-file (プルリクエスト #66)
+0c84467 [add] マイグレーションファイルのコミット
+fc75518 [update] 時間割のコマの色のカスタマイズ機能を実装
+b8b8f4f [fix] 授業詳細画面にもナビバーが表示されるように修正
+ec9eb66 マージ先 feature/update_delete_schedule (プルリクエスト #65)
+c57d014 [update] スケジュールの削除機能修正
+4c18dd0 マージ先 feature/modify-form (プルリクエスト #64)
+7523ace [fix] 掲示板入力フォームの見た目の改修
+71a9624 マージ先 feature/edit-font (プルリクエスト #63)
+f67f768 [fix] 数字フォントの修正
+f07bcdf マージ先 feature/modify-class-destroy-function (プルリクエスト #62)
+4ec5cac マージ先 feature/add-class-delete-confirm (プルリクエスト #61)
+e074005 [fix] コマからの授業削除時に授業登録者数をデクリメント
+5e931b3 [fix] 授業をコマから削除する際の確認用モーダルを表示
+ea7c626 マージ先 feature/add-question (プルリクエスト #60)
+df3327a [update] お問い合わせ内容の追加
+aae5ca3 マージ先 feature/add_delete_schedule (プルリクエスト #59)
+d87a569 マージ先 feature/update_schedule_layouts (プルリクエスト #58)
+7f5e9ac [update] 授業を時間割から外す
+8ebbbb6 [update] schedule/add.blade.php modify layouts
+9c95da2 Merge branch 'develop' of https://bitbucket.org/homiesinc/test into develop
+55ec77f マージ先 feature/add-logout-button (プルリクエスト #57)
+9474165 マージ先 feature/modify-thread-index-order (プルリクエスト #56)
+16ad317 [add] マイページにログアウトボタンを追加
+6b93819 [update] スレッド一覧の表示順を変更
+832ab92 マージ先 feature/modify-message-and-design (プルリクエスト #55)
+6da966f [update] UIの修正
+aa2ad97 [fix] パスワードリセット画面の文言修正
+f744bfb [update] アプリ全体でのUIの修正
+bb2d67e [update] storage以下に.gitignore追加
+d497803 [update] storage/app/public/.gitignore
+2bc78fc [update] storage/app/public/.gitignore
+f50bf20 [update] 新規登録画面にログイン画面へのリンクを設置
+313a83c [update] 一部文言と見た目の修正
+0b83a1a マージ先 feature/update-navbar-design (プルリクエスト #54)
+1685646 [update] ナビバーにアイコンを追加
+1688b04 マージ先 feature/add_click_event (プルリクエスト #53)
+ce20c62 マージ先 feature/thread-show-count (プルリクエスト #51)
+a61da89 マージ先 feature/modify-thread-menu-layout (プルリクエスト #52)
+af6b316 [update] クリック時のjQueryによるイベント発生
+9e13e6b [fix] コンマの追記
+906572d [update] 大学全体掲示板の見た目の修正
+9978d9e [update] 掲示板閲覧時に閲覧回数をインクリメント
+866a4c4 マージ先 feature/modify_threads_view (プルリクエスト #49)
+3eb5dc2 マージ先 feature/modify-existed-class-design (プルリクエスト #48)
+9a130fd スレッドのレイアウト変更
+6e0a9d8 プロフィール画面の修正
+1298244 [fix] 文言を修正
+4cc0a32 [update] 既存授業の一覧表示の見た目を修正
+fd57829 マージ先 feature/modify-redirect (プルリクエスト #47)
+b331424 [fix] 大学全体掲示板のスレッド一覧と投稿一覧の取得順番を変更して最新のスレッド、投稿が一番上に表示されるように修正しました。
+b15f51d [fix] スレッド作成後のリダイレクト先を修正
+e2dbe8f マージ先 feature/modify_layouts (プルリクエスト #46)
+4897c27 レイアウトなどの修正
+587c869 マージ先 feature/class-student-count (プルリクエスト #42)
+e7985c3 [fix]コンフリクトの解消(2)
+06f4639 [horfix] コンフリクトの解消
+5e98b7f マージ先 feature/modify_thread_transaction (プルリクエスト #45)
+15cb876 マージ先 feature/add_profile_function (プルリクエスト #44)
+ff6e87f マージ先 feature/modify_paginate (プルリクエスト #43)
+841af2d ThreadControllerにtransaction追加
+41a79f9 プロフィール編集マイページ機能
+2f55131 授業登録paginate編集
+a89b959 [update] 授業登録者数をカウントするように実装
+34500be マージ先 feature/university-posts (プルリクエスト #39)
+996c5f9 [hotfix] コンフリクトの解消
+c86b6ad Merge branch 'master' into feature/university-posts
+6170de5 マージ先 feature/question-button (プルリクエスト #41)
+3d48045 [modify] 大学全体掲示板関連ファイルの命名変更
+540449c [add] 問い合わせページの追加
+07b633c マージ先 feature/add_already_class (プルリクエスト #40)
+fb2c59e 既存の授業の追加
+ad54058 [update] 大学全体掲示板の実装
+de160e9 マージ先 feature/modify_post_method (プルリクエスト #38)
+71297d3 画像input反応しないバグの修正 form requestのrequired外しとどちらも空白でのsubmit時のエラーハンドリング
+6663142 マージ先 feature/add_formrequest_class_add_post (プルリクエスト #37)
+87b3e45 授業登録と掲示板投稿時のFormRequestとFormRequestの日本語化
+108c54a マージ先 feature/modify_ClassController_methods (プルリクエスト #36)
+7b1d06d 授業ごとの掲示板viewとcontroller修正
+0d1a33d マージ先 feature/posts-design (プルリクエスト #35)
+ef974ea [update] 時間割、掲示板のデザイン修正
+b346383 マージ先 feature/add_datatables (プルリクエスト #34)
+984cf00 jQueryのdatatables使用
+5d31820 マージ先 feature/add_post_img (プルリクエスト #33)
+3fe6c34 初期段階の掲示板への画像アップロード
+42ece19 マージ先 feature/css-update (プルリクエスト #32)
+f345ca0 [update] cssの更新
+6f1286f マージ先 feature/add_class_boards (プルリクエスト #30)
+f1b2345 掲示板雛形の作成
+91bb2dd 一時push
+9604b00 マージ先 feature/schedule_index (プルリクエスト #29)
+181d0ed [fix] resoursesで使わないメソッドをonlyで除外
+eb1c51c [fix]修正版プルリク（編集機能の廃止）
+594a4f4 [update] 時間割基本機能実装（削除以外）
+32a7513 マージ先 feature/fix_schedules_table (プルリクエスト #28)
+6e46658 [fix] カラム名修正
+194bf9d マージ先 feature/fix_schedule_model (プルリクエスト #27)
+89595a4 [hotfix] ファイル名の修正
+185c6a4 マージ先 feature/modify_schedule_table (プルリクエスト #26)
+c014fa9 user_idの型変更
+862c395 user_id追加と授業用のidをnullableに修正&拡張子のミスの修正
+c3475c0 user_id追加とnullableに修正&拡張子のミスの修正
+dc41f77 スケジュールテーブルの修正
+7669163 マージ先 feature/modify-users-column (プルリクエスト #25)
+368f329 usersのカラム 名修正
+fd10af5 マージ先 feature/modify-register (プルリクエスト #24)
+3d2e06c 新規登録の登録フローの修正　エラー分岐未完成
+6375466 マージ先 feature/register (プルリクエスト #23)
+167f482 push不足分
+e1840ee 新規登録flow変更
+289bf8d マージ先 feature/pre_register (プルリクエスト #22)
+1aa7eaf config 修正 登録用開発
+8966ffd マージ先 feature/config_pref_check (プルリクエスト #21)
+781059d 北海道１校目の名前変更
+1ef3117 config内の都道府県ごとの配列、開発前最終修正 (状況に応じて随時変更予定あり)
+bc86f11 マージ先 feature/config-pref-25-29 (プルリクエスト #19)
+347b49e [add] hyogo.phpの修正
+59b8aff マージ先 feature/config-pref-20-24 (プルリクエスト #20)
+8d47088 [add] 兵庫、京都、奈良、大阪、滋賀を追加。25-29
+98d4ef0 config pref 20~24
+039757b マージ先 feature/config-12 (プルリクエスト #18)
+02027f8 マージ先 feature/config-pref-30to34 (プルリクエスト #14)
+397c2de マージ先 feature/pref-14-19 (プルリクエスト #13)
+2c32042 千葉県追加
+c2f7802 [add] 広島、岡山、島根、鳥取、わ岡山、島根、鳥取、和歌山を島根、鳥取、和歌山を追加。30-34
+a8eae2c config pref14-19
+a20a7cb 　埼玉追加
+ba87e49 feature/config-pref-35to39 を develop にマージしました。
+c285426 群馬県追加
+ab32a85 [fix] ehimeの修正
+265ed81 栃木追加
+8695735 [add] 山口、愛媛、香川、高知、徳島を追加”
+0c46f5d feature/config-08 を develop にマージしました。
+6e95ae6 茨城県追加
+fe7f22e マージ先 feature/config-pref-04 (プルリクエスト #10)
+0922d7c 修正
+6b11534 宮城県、東北学院大学エラー疑惑
+84ba925 マージ先 feature/config-pref-13tokyo (プルリクエスト #8)
+16c1a25 マージ先 feature/config-pref-tohoku (プルリクエスト #9)
+858d776 [add] 東京の追加
+3315338 config-tohoku
+89ad4f5 マージ先 feature/config-pref-01 (プルリクエスト #7)
+fe76bc9 conflict修正 -- hokkaido
+b95c45f config-hokkaido
+76cd031 マージ先 feature/config-pref-02-kyusyu (プルリクエスト #6)
+9f07b87 [fix] 北海道を青森に修正しました。
+455baf3 [add] 青森、九州（福岡、鹿児島、熊本、宮崎、長崎、大分、沖縄、 佐賀）の大学情報を追加。
+64697ce マージ先 feature/config-pref-03 (プルリクエスト #5)
+dabbcef config-pref-03
+ab98516 マージ先 feature/config_prefecture01_10 (プルリクエスト #4)
+a4e43cd [add] config用都道府県別大学情報ファイル作成
+5b5a6bf マージ先 feature/migrations (プルリクエスト #3)
+860cc7b テーブルのカラム 複数nullable
+57df151 schedules present absent nullable
+bb176ce migration tables
+e9206dc マージ先 feature/modifyUtf-8_setting (プルリクエスト #2)
+e268eca [fix] gomennnasaigomennnasai
+540725e [fix] ごめんなさい
+a67eef5 Merge branch 'master' of https://bitbucket.org/homiesinc/test
+333f8dc マージ先 feature/login_register (プルリクエスト #1)
+6c22555 login$register
+9f0df5b feature/settings を master にマージしました。
+a51090e [fix] インデントの修正
+5241621 [update] pushの追加
+c84223a [update] 初期設定
+359201b Merge branch 'master' of https://bitbucket.org/homiesinc/test
+72a9d24 [first] ファイルの新規登録
+5bae7fc Initial commit

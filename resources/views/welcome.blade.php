@@ -10,7 +10,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
         <!-- Styles -->
@@ -96,18 +95,23 @@
                             </div>
                             <div class="modal-body">
                                 <div id="sampleCarousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-target="#sampleCarousel" data-slide-to="0"></li>
+                                        <li data-target="#sampleCarousel" data-slide-to="1"></li>
+                                        <li data-target="#sampleCarousel" data-slide-to="2"></li>
+                                    </ol>
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active">
-                                            <p><img src="{{asset('storage/welcome_img/explain000.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <img src="{{asset('storage/explain000.jpg')}}" alt="画像を表示できません">
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/welcome_img/explain001.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <img src="{{asset('storage/explain001.jpg')}}" alt="画像を表示できません">
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/welcome_img/explain002.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <img src="{{asset('storage/explain002.jpg')}}" class="img-responsive" alt="画像を表示できません">
                                         </div>
                                         <div class="item">
-                                            <p><img src="{{asset('storage/welcome_img/explain003.jpg')}}" style="max-height: calc(100vh - 250px);" alt="画像を表示できません"></p>
+                                            <img src="{{asset('storage/explain003.jpg')}}" class="img-responsive" alt="画像を表示できません">
                                         </div>
                                     </div>
                                     <a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
@@ -118,17 +122,15 @@
                                     </a>
                                 </div>
                             </div>
-                            @guest
-                                <div class="modal-footer">
-                                    <a href="{{ route('select.pref') }}" class="btn btn-primary btn-block">新規登録はこちら</a>
-                                </div>
-                            @endguest
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" style="margin: 0 auto">さっそく使ってみる</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="links">
                     <a href="#" data-toggle="modal" data-target="#sampleModal"><p class="text-capitalize">Unipediaにできること</p></a>
-                    <a href="https://www.unipedia-official.com" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
+                    <a href="https://peraichi.com/landing_pages/view/xewmz" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
                     <a href="{{ route('questions.index') }}" target="_blank"><p class="text-capitalize">お問い合わせ</p></a>
                     <a href="https://twitter.com/unipedia_info" target="_blank"><p class="text-capitalize">Twitter</p></a>
                     <a href="https://www.instagram.com/official_unipedia" target="_blank"><p class="text-lowercase">instagram</p></a>
@@ -136,10 +138,9 @@
                 <a href="#" class="btn btn-info btn-block" data-toggle="modal" data-target="#sampleModal"><p class="text-capitalize">Unipediaとは？</p></a>
                 @guest
                     <a href="{{ route('select.pref') }}" class="btn btn-primary btn-block">新規登録はこちら</a>
-                @else
-                    <a href="{{ route('schedules.index') }}" class="btn btn-primary btn-block">時間割へ</a>
                 @endguest
             </div>
         </div>
+    <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

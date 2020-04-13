@@ -6616,7 +6616,10 @@ button.close {
     linear,
     left top,
     right top,
+<<<<<<< HEAD
     /*下の二箇所をコメントアウト*/
+=======
+>>>>>>> 8745cc6... [update] welcomeページの修正
     /*from(rgba(0, 0, 0, 0.5)),
     to(rgba(0, 0, 0, 0.0001))*/
   );
