@@ -47,7 +47,9 @@ class ScheduleController extends Controller
     public function create()
     {
         $day_id = $_GET['id'];
-        $classes = Lecture::where('day_id', $day_id)->paginate(10);
+        $classes = Lecture::where('day_id', $day_id)
+            ->where('university_id', Auth::user()->university_id)
+            ->paginate(10);
         return view('schedule.add', compact('day_id', 'classes'));
     }
 
