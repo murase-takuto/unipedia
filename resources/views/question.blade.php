@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 <link href="css/style.css" rel="stylesheet" type="text/css">
 @section('content')
 <div class="container">
