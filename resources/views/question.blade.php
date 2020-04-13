@@ -34,7 +34,7 @@
                     </a>
                 </p>
             </div>
-            <div class="panel panel-primary" style="margin-bottom: 20%">
+            <div class="panel panel-info" style="margin-bottom: 20%">
                 <div class="panel-heading">
                     よくある質問
                 </div>

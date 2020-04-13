@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             <input id="lefile" type="file" style="display:none">
             
-            <div class="panel panel-primary">
+            <div class="panel panel-info">
                 <div class="panel-heading" style="text-align:center;">
                     <strong style="font-size: 16px">{{ config('thread.' . $id . '.name') }}</strong>
                 </div>

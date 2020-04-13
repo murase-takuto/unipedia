@@ -13,16 +13,16 @@
             @endif
             <input id="lefile" type="file" style="display:none">
             
-            <div class="panel panel-primary">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <p style="text-align:center;">
                         <strong style="font-size: 16px">{{ $thread->title }}</strong>
                     </p>
                     <form class="form-horizontal" method="post" action="{{ route('universityposts.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="form-group" style="width:auto; margin: 0 1px">
+                        <div class="form-group">
                             <input type="hidden" name="thread_id" value="{{ $thread->id }}">
-                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0 1px;"></textarea>
+                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0; border-color:#4285F3; border-bottom:none; border-bottom-left-radius: 0;border-bottom-right-radius: 0;"></textarea>
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn btn-info" style="border-radius: 0;">
@@ -32,7 +32,7 @@
                                 </label>
                                 <input type="text" class="form-control" placeholder="選択された画像の名前" style="border-radius: 0;" readonly>
                             </div>
-                            <input type="submit" class="btn btn-info btn-block" value="投稿する" style="margin:0 1px; width:100%; border-top:none; border-top-left-radius:0; border-top-right-radius:0;"> 
+                            <input type="submit" class="btn btn-info btn-block" value="投稿する" style="margin:0; width:100%; border-top:none; border-top-left-radius:0; border-top-right-radius:0;"> 
                         </div>
                     </form>
                 </div>
