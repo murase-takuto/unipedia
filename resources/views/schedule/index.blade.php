@@ -39,7 +39,7 @@
                         @if ($lecture_infos[$i] == null)
                             <a href="{{ route('schedules.create', ['id' => $i]) }}" style="color:black">{{ '-' }}</a>
                         @else
-                            <a href="{{ route('class.show', ['id' => $i]) }}" style="color:black">
+                            <a href="{{ route('class.show', ['id' => $i, 'class_id' => $lecture_infos[$i]['id']]) }}" style="color:black">
                                 <span style="font-size:x-small; font-weight:600">
                                     {{ $lecture_infos[$i]['name'] }}
                                 </span>

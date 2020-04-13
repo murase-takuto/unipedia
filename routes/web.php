@@ -32,7 +32,8 @@ Route::group(['namespace' => 'Student',], function() {
 
 //学生時間割RESTful
 Route::group(['namespace' => 'Student', 'middleware' => 'auth'], function() {
-    Route::resource('schedules', 'ScheduleController');
+    Route::get('schedules/{id}/class/{class_id}', 'ScheduleController@show');
+    Route::resource('schedules', 'ScheduleController', ['except' => ['show']]);
     Route::resource('threads', 'ThreadController');
     Route::resource('universityposts', 'UniversityPostController');
     Route::resource('class', 'ClassController', ['only' => ['show', 'update', 'store', 'destroy']]);

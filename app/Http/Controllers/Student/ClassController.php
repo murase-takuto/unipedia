@@ -64,7 +64,7 @@ class ClassController extends Controller
         }
 
         $post->user_id = Auth::id();
-        $post->class_id = $request->class_id;
+        $post->class_id = $request->id;
         $post->save();
         return redirect()->back()
             ->with('message', '投稿しました');
@@ -77,7 +77,7 @@ class ClassController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   $class = $_GET['class_id'];
         $user_id = Auth::id();
         $user_name = Auth::user()->name;
         $schedule = Schedule::where('user_id', $user_id)->first();
@@ -85,7 +85,7 @@ class ClassController extends Controller
         $schedule_id = $schedule->$class_id;
         $lecture = Lecture::where('id', $schedule_id)->first();
         $posts = Post::with('user')
-            ->where('class_id', $id)
+            ->where('class_id', $class)
             ->orderBy('created_at', 'dsc')
             ->paginate(10);
         return view('schedule.detail', compact('id', 'lecture', 'posts'));

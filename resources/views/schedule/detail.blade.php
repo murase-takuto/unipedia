@@ -43,7 +43,7 @@
                     <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="input-group">
-                            <input type="hidden" name="class_id" value="{{ $id }}">
+                            <input type="hidden" name="id" value="{{ $lecture->id }}">
                             <input type="text" name="body" class="form-control" placeholder="ここにテキストを入力">
                             <span class="input-group-btn">
                                 <img id="preview" style="width:35px;height:35px;">
