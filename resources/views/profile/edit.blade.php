@@ -4,7 +4,7 @@
 <div class="container" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary" style="margin-bottom:10px">
+            <div class="panel panel-info" style="margin-bottom:10px">
                 <div class="panel-heading" style="text-align: center">
                     <strong style="font-size: 16px">マイページ編集</strong>
                 </div>
@@ -86,11 +86,6 @@
                                 現在のパスワード<span style="color: red">※必須</span>
                                 <div class="form-group" style="margin-bottom: 0px;">
                                     <input class="form-control" type="password" name="oldpass" required>
-                                    <div style="margin-top: 15px;">
-                                        <a href="{{ route('password.request') }}">
-                                            パスワードを忘れた場合はこちら
-                                        </a>
-                                    </div>
                                 </div>
                             </span>
                             <p class="text-center" style="margin-top: 10px">※変更を完了するには現在のパスワードが必要です。</p>

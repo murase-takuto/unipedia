@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Unipedia') }}｜大学生のための情報共有広場</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -85,7 +85,6 @@
                         <p class="modal-title">時間割表のコマの色を変更できます。</p>
                     </div>
                     <div class="modal-body">
-                        <p class="text-center">以下の中から好きな色を選んでください。</p>
                         <form class="form-horizontal" id="class-color-change" action="{{ route('schedules.update', [$id]) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
@@ -93,37 +92,37 @@
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="0" checked><span style="color:{{ config('colors.0') }};text-stroke:1px #000">ホワイト</span>
+                                            <input type="radio" name="color" value="0" checked><i class="fas fa-circle" style="color:#EEEEEE; font-size: 20px"></i>ホワイト
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="1"><span style="color:{{ config('colors.1') }};">ピンク（必修科目）</span>
+                                            <input type="radio" name="color" value="1"><i class="fas fa-circle" style="color:{{ config('colors.1') }}; font-size: 20px"></i>ピンク（必修科目）
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="2"><span style="color:{{ config('colors.2') }};">イエロー（選択科目）</span>
+                                            <input type="radio" name="color" value="2"><i class="fas fa-circle" style="color:{{ config('colors.2') }}; font-size: 20px"></i>イエロー（選択科目）
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="3"><span style="color:{{ config('colors.3') }};">オレンジ</span>
+                                            <input type="radio" name="color" value="3"><i class="fas fa-circle" style="color:{{ config('colors.3') }}; font-size: 20px"></i>オレンジ
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="4"><span style="color:{{ config('colors.4') }};">グリーン</span>
+                                            <input type="radio" name="color" value="4"><i class="fas fa-circle" style="color:{{ config('colors.4') }}; font-size: 20px"></i>グリーン
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="5"><span style="color:{{ config('colors.5') }};">ブルー</span>
+                                            <input type="radio" name="color" value="5"><i class="fas fa-circle" style="color:{{ config('colors.5') }}; font-size: 20px"></i>ブルー
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="color" value="6"><span style="color:{{ config('colors.6') }};">パープル</span>
+                                            <input type="radio" name="color" value="6"><i class="fas fa-circle" style="color:{{ config('colors.6') }}; font-size: 20px"></i>パープル
                                         </label>
                                     </div>
                                 </div>

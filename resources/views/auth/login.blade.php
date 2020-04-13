@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('content')
 <div class="container">
@@ -49,16 +49,12 @@
                             </div>
                         </div>
                     </form>
-                    <div  class="text-center">
-                        <a href="{{ route('password.request') }}">
-                            パスワードを忘れた場合はこちら
-                        </a>
-                    </div>
                 </div>
             </div>
             <a class="btn btn-primary btn-block" href="{{ route('select.pref') }}">
                 新規登録はこちら
             </a>
+            <a href="{{ route('questions.index') }}">お問い合わせ</a>
         </div>
     </div>
 </div>

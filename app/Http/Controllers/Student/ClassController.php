@@ -77,7 +77,8 @@ class ClassController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   $class = $_GET['class_id'];
+    {   
+        $class = $_GET['class_id'];
         $user_id = Auth::id();
         $user_name = Auth::user()->name;
         $schedule = Schedule::where('user_id', $user_id)->first();
@@ -88,7 +89,7 @@ class ClassController extends Controller
             ->where('class_id', $class)
             ->orderBy('created_at', 'dsc')
             ->paginate(10);
-        return view('schedule.detail', compact('id', 'lecture', 'posts'));
+        return view('schedule.detail', compact('id', 'lecture', 'posts', 'class'));
     }
 
     /**

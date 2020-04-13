@@ -21,7 +21,7 @@
                 @endforeach
             </ul>
             @endif
-            <div class="panel panel-primary" style="margin-bottom:10px">
+            <div class="panel panel-info" style="margin-bottom:10px">
                 <div class="panel-heading" style="text-align: center">
                     <strong style="font-size: 16px">マイページ</strong>
                 </div>
