@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="panel panel-default" style="margin-top: 15px;">
                 <div class="panel-heading text-center">ログイン</div>
                 @if (session('message'))
                     <div class="alert alert-success">{{ session('message') }}</div>
@@ -54,7 +54,7 @@
             <a class="btn btn-primary btn-block" href="{{ route('select.pref') }}">
                 新規登録はこちら
             </a>
-            <a href="{{ route('questions.index') }}">お問い合わせ</a>
+            <a class="btn btn-primary btn-block" href="{{ route('questions.index') }}">お問い合わせ</a>
         </div>
     </div>
 </div>
