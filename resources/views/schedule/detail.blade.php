@@ -47,12 +47,13 @@
                     </table>
                     <form method="post" action="{{ route('class.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="form-group">
+                        <div class="input-group">
                             <input type="hidden" name="id" value="{{ $lecture->id }}">
-                            <textarea name="body" class="form-control" placeholder="ここにテキストを入力" style="margin:0; border-color:#4285F3; border-bottom:none; border-bottom-left-radius: 0;border-bottom-right-radius: 0;"></textarea>
-                            <div class="input-group">
-                                <label class="input-group-btn">
-                                    <span class="btn btn-info" style="border-radius: 0;">
+                            <input type="text" name="body" class="form-control" placeholder="ここにテキストを入力">
+                            <span class="input-group-btn">
+                                <img id="preview" style="width:35px;height:35px;">
+                                <label>
+                                    <span class="btn btn-info">
                                         <i class="fas fa-camera"></i>
                                         <input type="file" name="image" class="form-control" style="display:none;border-top-right-radius:0; border-bottom-right-radius:0;">
                                     </span>
