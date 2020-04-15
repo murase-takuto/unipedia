@@ -29,6 +29,10 @@ Route::group(['namespace' => 'Student',], function() {
     Route::get('fuculties', 'RegisterSchoolController@selectFuculty')->name('select.fuculty');
     Route::get('classes', 'RegisterSchoolController@selectClass')->name('select.class');
 });
+//チュートリアル
+Route::get('/Student/tutorial', function () {
+    return view('tutorial');
+});
 
 //学生時間割RESTful
 Route::group(['namespace' => 'Student', 'middleware' => 'auth'], function() {
