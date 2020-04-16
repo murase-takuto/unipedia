@@ -43,7 +43,7 @@
                         <p>{{ config($user->pref_id . '.' . $user->university_id .'.fuculty.' . $user->fuculty_id) }}</p>
                         <br>
                         <label>学科</label>
-                        <p>{{ config($user->pref_id . '.' . $user->university_id .'.class.' . $user->fuculty_id . '.' . $user->fuculty_id) }}</p>
+                        <p>{{ config($user->pref_id . '.' . $user->university_id .'.class.' . $user->fuculty_id . '.' . $user->subject_id) }}</p>
                         <br>
                     </div>
                 </span>
