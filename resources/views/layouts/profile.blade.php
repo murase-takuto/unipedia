@@ -30,7 +30,7 @@
                     </button>
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ route('schedules.index') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Unipedia') }}
                     </a>
                 </div>
 
@@ -41,11 +41,37 @@
                             <a class="btn btn-info" href="{{ route('profile.create') }}" style="border-color:transparent">
                                 プロフィールの情報を編集する
                             </a>
+                            <a class="btn btn-info" href="#" style="border-color:transparent" data-toggle="modal" data-target="#logout-confirm-modal" style="width:10%; margin:auto auto 25% auto">
+                                ログアウトする
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <div class="modal fade" id="logout-confirm-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <p class="modal-title">確認</p>
+                    </div>
+                    <div class="modal-body">
+                        本当にログアウトしますか？
+                    </div>
+                    <div class="modal-footer">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            {{ csrf_field() }}
+                            <button class="btn btn-primary btn-block" type="submit" value="logout">
+                                ログアウトする
+                            </button>
+                        </form>
+                        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         @yield('content')
     </div>
     <nav class="navbar navbar-default navbar-fixed-bottom">
