@@ -35,8 +35,8 @@
                             <div class="collapse" id="profile_img">
                                 <div class="well">
                                     <div class="form-group">
-                                        <img id="preview" class="img-responsive" style="width:220px; height:220px; border-radius:50%; background-position: center center; margin:20px auto;">
-                                        <span class="btn btn-default btn-block" style="width:70%; margin:0 auto">
+                                        <img id="preview" class="img-responsive" style="width:220px; height:220px; border-radius:50%; object-fit: cover; background-position: center center; margin:20px auto;">
+                                        <span class="btn btn-default btn-block" style="width:100%; margin:0 auto">
                                             <label>
                                                 <i class="fas fa-camera"></i>
                                                 新しいプロフィール画像を選択
