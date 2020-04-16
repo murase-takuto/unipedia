@@ -63,7 +63,7 @@
                             <i class="far fa-lightbulb"></i>
                             <p>申し訳ございません。</p>
                             <p>現在は短期大学・専門学校には対応しておりません。</p>
-                            <p>専門学生からのご要望が多ければ対応させていただきます。</p>
+                            <p>今後ご要望が多ければ対応させていただきます。</p>
                         </div>
                     </div>
                     <a class="list-group-item" data-toggle="collapse" href="#question3">
