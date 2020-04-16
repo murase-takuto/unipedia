@@ -56,13 +56,13 @@
                     </div>
                     <a class="list-group-item" data-toggle="collapse" href="#question2">
                         <i class="fas fa-question"></i>
-                        専門学生は利用できますか？
+                        短大生・専門学生は利用できますか？
                     </a>
                     <div class="collapse" id="question2">
                         <div class="well">
                             <i class="far fa-lightbulb"></i>
                             <p>申し訳ございません。</p>
-                            <p>現在は4年制大学のみ対応しております。</p>
+                            <p>現在は短期大学・専門学校には対応しておりません。</p>
                             <p>専門学生からのご要望が多ければ対応させていただきます。</p>
                         </div>
                     </div>

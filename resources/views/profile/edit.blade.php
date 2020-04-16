@@ -9,17 +9,28 @@
                     <strong style="font-size: 16px">マイページ編集</strong>
                 </div>
                     @if (session('status'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">×</span>
+                            </button>
                             {{ session('status') }}
                         </div>
                     @endif
 
                     @if (session('error'))
-                        <div class="alert alert-danger">{{session('error')}}</div>
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            {{session('error')}}
+                        </div>
                     @endif
 
                     @if (count($errors) > 0)
-                        <ul class="alert alert-danger" style="list-style: none;">
+                        <ul class="alert alert-danger alert-dismissible fade in" role="alert" style="list-style: none;">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">×</span>
+                            </button>
                             @foreach ($errors->all() as $error)
                                 <li>{{$error}}</li>
                             @endforeach

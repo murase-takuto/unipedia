@@ -38,9 +38,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="btn btn-info" href="{{ route('profile.create') }}" style="border-color:transparent">
-                                プロフィールの情報を編集する
-                            </a>
                             <a class="btn btn-info" href="#" style="border-color:transparent" data-toggle="modal" data-target="#logout-confirm-modal" style="width:10%; margin:auto auto 25% auto">
                                 ログアウトする
                             </a>
