@@ -48,9 +48,9 @@
                     </div>
                 </span>
             </div>
-            <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#logout-confirm-modal" style="width:10%; margin:auto auto 25% auto">
-                ログアウト
-            </button>
+            <a class="btn btn-info btn-block" href="{{ route('profile.create') }}" style="width: 90%; margin: 0 auto 10vh auto;">
+                プロフィールを編集する
+            </a>
             
             <div class="modal fade" id="logout-confirm-modal" tabindex="-1">
                 <div class="modal-dialog">

@@ -51,10 +51,17 @@
                     </form>
                 </div>
             </div>
-            <a class="btn btn-primary btn-block" href="{{ route('select.pref') }}">
-                新規登録はこちら
-            </a>
-            <a class="btn btn-primary btn-block" href="{{ route('questions.index') }}">お問い合わせ</a>
+            <div class="text-center">
+                <a href="{{ route('select.pref') }}">
+                    新規登録はこちら
+                </a>
+            </div>
+            <br>
+            <div class="text-center">
+                <a href="{{ route('questions.index') }}">
+                    お問い合わせ
+                </a>
+            </div>
         </div>
     </div>
 </div>

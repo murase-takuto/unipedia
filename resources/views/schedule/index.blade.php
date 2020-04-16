@@ -9,7 +9,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <div class="alert alert-warning">
+            <div class="alert alert-warning" style="margin-bottom: 8px; padding-bottom:4px; padding-top:4px;">
                 <a href="{{ route('threads.show', ['id' => 5]) }}">
                     【新入生向け】履修相談はこちら！
                 </a>
@@ -39,12 +39,12 @@
                         @if ($lecture_infos[$i] == null)
                             <a href="{{ route('schedules.create', ['id' => $i]) }}" style="color:black">{{ '-' }}</a>
                         @else
-                            <a href="{{ route('class.show', ['id' => $i, 'class_id' => $lecture_infos[$i]['id']]) }}" style="color:black">
-                                <span style="font-size:x-small; font-weight:600">
+                            <a href="{{ route('class.show', ['id' => $i, 'class_id' => $lecture_infos[$i]['id']]) }}" style="color:black; font-size:x-small;">
+                                <span style="font-weight:600">
                                     {{ $lecture_infos[$i]['name'] }}
                                 </span>
                                 <br>
-                                <span style="font-size:x-small;">
+                                <span>
                                     {{ $lecture_infos[$i]['room_number'] }}
                                 </span>
                             </a>

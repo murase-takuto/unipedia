@@ -5,9 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default" style="margin-bottom:10px">
-                <div class="panel-heading">学校選択</div>
+                <div class="panel-heading text-center" style="font-size: 16px"><strong>新規登録</strong></div>
 
                 <div class="panel-body">
+                    <br>
+                    <label for="pref" class="col-md-4 control-label">大学を選択してください</label>
                     <div class="form-group{{ $errors->has('school') ? ' has-error' : '' }}">
                         <div class="col-md-6 col-md-offset-3">
                             @if (session('error'))
@@ -27,6 +29,12 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <a href="{{ route('questions.index') }}">
+                    大学が見つからない場合はこちら
+                </a>
+            </div>
+            <br>
             <div class="text-center">
                 <a href="{{ route('login') }}">
                     ログインはこちら

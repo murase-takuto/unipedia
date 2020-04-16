@@ -5,10 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default" style="margin-bottom:10px">
-                <div class="panel-heading">学科選択</div>
+                <div class="panel-heading text-center" style="font-size: 16px"><strong>新規登録</strong></div>
 
                 <div class="panel-body">
-                    
+                    <br>
+                    <label for="fuculty" class="col-md-4 control-label">学科を選択してください</label>
                     <div class="form-group{{ $errors->has('school') ? ' has-error' : '' }}">
                         @if (session('error'))
                             <div class="alert alert-danger">
@@ -41,6 +42,12 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <a href="{{ route('questions.index') }}">
+                    学科が見つからない場合はこちら
+                </a>
+            </div>
+            <br>
             <div class="text-center">
                 <a href="{{ route('login') }}">
                     ログインはこちら

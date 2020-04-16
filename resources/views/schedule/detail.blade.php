@@ -20,6 +20,7 @@
                 </ul>
             @endif
 
+            <a href="{{ route('schedules.index') }}"><i class="fas fa-chevron-left"></i>時間割表へ戻る</a>
             <input id="lefile" type="file" style="display:none">
 
             <div class="panel panel-info">

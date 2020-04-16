@@ -20,6 +20,7 @@
                 </ul>
             @endif
 
+            <a href="{{ route('threads.show', ['id' => $thread->type_id]) }}"><i class="fas fa-chevron-left"></i>広場一覧へ戻る</a>
             <input id="lefile" type="file" style="display:none">
             
             <div class="panel panel-info">
