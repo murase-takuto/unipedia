@@ -141,7 +141,7 @@
                 </div>
                 <div class="links">
                     <a href="#" data-toggle="modal" data-target="#sampleModal"><p class="text-capitalize">Unipediaにできること</p></a>
-                    <a href="https://www.unipedia-official.com" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
+                    <a href="https://lp.unipedia-official.com" target="_blank"><p class="text-capitalize">アプリ公式サイト</p></a>
                     <a href="{{ route('questions.index') }}" target="_blank"><p class="text-capitalize">お問い合わせ</p></a>
                     <a href="https://twitter.com/unipedia_info" target="_blank"><p class="text-capitalize">Twitter</p></a>
                     <a href="https://www.instagram.com/official_unipedia" target="_blank"><p class="text-lowercase">instagram</p></a>
