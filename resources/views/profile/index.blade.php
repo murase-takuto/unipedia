@@ -59,7 +59,7 @@
                     </div>
                 </span>
             </div>
-            <a class="btn btn-info btn-block" href="{{ route('profile.create') }}" style="width: 90%; margin: 0 auto 10vh auto;">
+            <a class="btn btn-info btn-block" href="{{ route('profile.create') }}" style="width: 90%; margin: 0 auto 15vh auto;">
                 プロフィールを編集する
             </a>
             
