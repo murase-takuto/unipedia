@@ -5,16 +5,19 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('status'))
-                <div class="alert alert-success">
+                <div class="alert alert-success alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">×</span>
+                    </button>
                     {{ session('status') }}
                 </div>
             @endif
-            <div class="alert alert-warning" style="margin-bottom: 8px; padding-bottom:4px; padding-top:4px;">
+            <div class="alert alert-warning" style="margin-bottom: 8px;">
                 <a href="{{ route('threads.show', ['id' => 5]) }}">
                     【新入生向け】履修相談はこちら！
                 </a>
             </div>
-            <table border=1>
+            <table border=1 style="margin-bottom: 15vh">
                 <tr>
                     <th bgcolor="#E4E5E9" width="4%"></th>
                     <th bgcolor="#E4E5E9" width="16%">月</th>

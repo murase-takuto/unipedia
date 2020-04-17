@@ -5,17 +5,30 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (session('message'))
-            <div class="alert alert-success">{{session('message')}}</div>
-            @endif
-            
-            @if (session('error'))
-            <div class="alert alert-danger">{{session('error')}}</div>
+                <div class="alert alert-success alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    {{ session('message') }}
+                </div>
             @endif
 
-            @if(count($errors) > 0)
-                <ul class="alert alert-danger"　style="list-style: none;">
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    {{session('error')}}
+                </div>
+            @endif
+
+            @if (count($errors) > 0)
+                <ul class="alert alert-danger alert-dismissible fade in" role="alert" style="list-style: none;">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">×</span>
+                    </button>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li>{{$error}}</li>
                     @endforeach
                 </ul>
             @endif
