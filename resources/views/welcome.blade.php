@@ -19,15 +19,13 @@
         <meta property="og:image" content="{{ asset('storage/page_info_img/ogp_img_01.png') }}" />
         <meta property="og:site_name" content="大学生のための情報共有広場｜Unipedia" />
         <meta property="og:description" content="全国の大学生必須の授業情報共有アプリ。このアプリで大学生活がガラッと変わる。過去問や試験範囲、サークルなど学生生活の情報もこのアプリひとつですべて解決！" />
-
-
+        <!--Favicon-->
+        <link rel="shortcut icon" href="{{ asset('storage/page_info_img/favicon.ico') }}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-        <!--Fabicon-->
-        <link rel=”icon” href="{{ asset('storage/page_info_img/fabicon01.ico') }}">
         <!-- Styles -->
         <style>
             html, body {
