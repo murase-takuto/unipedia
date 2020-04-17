@@ -10,7 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Unipedia') }}｜大学生のための情報共有広場</title>
-
+    <!--Fabicon-->
+    <link rel=”icon” href="{{ asset('storage/page_info_img/fabicon01.ico') }}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
