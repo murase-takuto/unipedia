@@ -48,7 +48,7 @@
                             <i class="far fa-lightbulb"></i>
                             <p>キャンパスの所在地をご確認の上、もう１度お試しください。</p>
                             <p>解決できずお困りの場合は、お手数ですが
-                                <a href="https://www.unipedia-official.com" target="_blank">Unipedia公式サイト</a>、
+                                <a href="https://lp.unipedia-official.com" target="_blank">Unipedia公式サイト</a>、
                                 <a href="https://twitter.com/unipedia_info" target="_blank">公式Twitter</a>、
                                 <a href="https://www.instagram.com/official_unipedia" target="_blank">公式Instagram</a>
                             のいずれかまでお問い合わせください。</p>
@@ -75,7 +75,7 @@
                             <i class="far fa-lightbulb"></i>
                             <p>Unipediaはあなたの大学生活を笑顔にするサービスです。</p>
                             <p>アプリ利用中のトラブル（悪口、暴言など）については
-                                <a href="https://www.unipedia-official.com" target="_blank">Unipedia公式サイト</a>、
+                                <a href="https://lp.unipedia-official.com" target="_blank">Unipedia公式サイト</a>、
                                 <a href="https://twitter.com/unipedia_info" target="_blank">公式Twitter</a>、
                                 <a href="https://www.instagram.com/official_unipedia" target="_blank">公式Instagram</a>
                             のいずれかまでお問い合わせください。</p>
