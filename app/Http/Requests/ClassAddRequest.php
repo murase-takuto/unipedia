@@ -25,7 +25,7 @@ class ClassAddRequest extends FormRequest
     {
         return [
             'name' => 'required|max:50',
-            'teacher' => 'required|max:40',
+            'teacher' => 'nullable|max:40',
             'room_number' => 'required|max:20'
         ];
     }
