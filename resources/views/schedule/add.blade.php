@@ -93,8 +93,15 @@
                                                 <tr>
                                                     <th>
                                                         <p class="list-group-item-heading">{{ $class->name }}</p>
-                                                        <i class="fas fa-user fa-fw" style="color: skyblue;"></i>{{ $class->teacher }}・
-                                                        <i class="fas fa-university fa-fw" style="color: skyblue;"></i>{{ $class->room_number }}
+                                                        <i class="fas fa-user fa-fw" style="color: skyblue;"></i>
+                                                        @if ($class->teacher)
+                                                            {{ $class->teacher }}
+                                                        @else
+                                                            未登録
+                                                        @endif
+                                                        ・
+                                                        <i class="fas fa-university fa-fw" style="color: skyblue;"></i>
+                                                        {{ $class->room_number }}
                                                     </th>
                                                     <td>
                                                         {{ $class->count }}人

@@ -53,7 +53,11 @@
                                 <td>
                                     <div class="text-center">
                                         <label>担当教員</label>
-                                        <p>{{ $lecture->teacher }}</p>
+                                        @if ($lecture->teacher)
+                                            <p>{{ $lecture->teacher }}</p>
+                                        @else
+                                            <p>未登録</p>
+                                        @endif
                                     </div>
                                 </td>
                             </tr>

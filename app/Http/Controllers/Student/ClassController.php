@@ -118,19 +118,20 @@ class ClassController extends Controller
             try {
                 $user_info = Auth::user();
                 //授業情報関係 //classesテーブル
-                $lecture = Lecture::updateOrCreate([
+                $lecture = Lecture::firstOrNew([
                     'university_id' => $user_info->university_id,
                     'fuculty_id' => $user_info->fuculty_id,
                     'subject_id' => $user_info->subject_id,
                     'name' => $request->name,
                     //$idは何曜何限かの情報
                     'day_id' => $id,
-                ], [
                     'teacher' => $request->teacher,
                     'room_number' => $request->room_number
                 ]);
-                $lecture_id = $lecture->id;
+                ++$lecture->count;
+                $lecture->save();
                 $day_id = $lecture->day_id;
+                $lecture_id = $lecture->id;
                 //ユーザーの時間割表更新
                 $schedule = Schedule::where('user_id', $user_info->id)->first();
                 $class_id = 'class_' . $day_id;
