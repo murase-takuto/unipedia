@@ -9,7 +9,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClassAddRequest;
-use App\Http\Requests\ClassPostRequest;
+use App\Http\Requests\PostRequest;
 use App\Schedule;
 use App\Lecture;
 use App\Post;
@@ -42,7 +42,7 @@ class ClassController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ClassPostRequest $request, Post $post)
+    public function store(PostRequest $request, Post $post)
     {
         if (!$request->body && !$request->image) {
             return redirect()->back()
@@ -60,14 +60,14 @@ class ClassController extends Controller
 
         if ($request->body) {
             $post->body = $request->body;
-            $result = true;
+            $result = false;
         }
 
         $post->user_id = Auth::id();
         $post->class_id = $request->id;
         $post->save();
         return redirect()->back()
-            ->with('message', '投稿しました');
+            ->with('message', $result === true ? '画像を投稿しました' : '投稿しました');
     }
 
     /**
