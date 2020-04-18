@@ -82,7 +82,7 @@
                     </form>
                     <p class="text-center" style="margin-top: 4px">みんなで授業情報を共有しよう！</p>
                 </div>
-                <ul class="list-group posts">
+                <ul class="list-group posts" style="border-bottom: 1px solid; border-bottom-color: #4285F3">
                     @if ($posts->isNotEmpty())
                         @foreach ($posts as $post)
                         <li class="list-group-item">
