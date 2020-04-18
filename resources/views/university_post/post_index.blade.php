@@ -46,7 +46,7 @@
                         </div>
                     </form>
                 </div>
-                <ul class="list-group posts">
+                <ul class="list-group posts" style="border-bottom: 1px solid; border-bottom-color: #4285F3">
                     @foreach ($posts as $post)
                         <li class="list-group-item">
                             <font size="2" color="#7e8183">
